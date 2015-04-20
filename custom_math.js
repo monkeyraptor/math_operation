@@ -4,14 +4,19 @@
 //For example, "goat".
 //Then to call the *factorial* function: goat.factorial(2).
 var math = {
+    //checking above 21 digit length or infinity
     check: function (a) {
         var result = 0;
         
         if (a.toString().length > 21 || !isFinite(a)) {
             result = 1;
         }
-        
         return result;
+    },
+    
+    //rounding down
+    rd: function (a) {
+        return Math.floor(a);
     },
     
     //*****************************************
@@ -21,10 +26,14 @@ var math = {
             result = 1;
             
         if (Number(n) >= 0) {
+            n = this.rd(n);
+            
             if (n > 1) {
                 for (i; i <= n; i++) {
                     result *= i;
                 }
+            } else {
+                result = 1;
             }
         } else {
             result = "INPUT ERROR: n >= 0";
@@ -32,7 +41,6 @@ var math = {
         if (!!this.check(result)) {
             result = "Result is too LARGE: " + result;
         }
-        
         return result;
     },
     
@@ -46,12 +54,16 @@ var math = {
             result;
             
         if (n >= k && Number(n) >= 0 && Number(k) >= 0) {
+            n = this.rd(n);
+            k = this.rd(k);
+            
             if (n === k || k === 0) {
                 result = 1;
             } else if (k === 1) {
                 result = n;
             } else {
                 start = n - k + 1;
+                
                 for (i; i <= k; i++) {
                     denumerator *= i;
                 }
@@ -66,7 +78,6 @@ var math = {
         if (!!this.check(result)) {
             result = "Result is too LARGE: " + result;
         }
-        
         return result;
     },
     
@@ -78,6 +89,9 @@ var math = {
             result;
             
         if (n >= k && Number(n) >= 0 && Number(k) >= 0) {
+            n = this.rd(n);
+            k = this.rd(k);
+            
             if (n === k || k === 0) {
                 result = 1;
             } else if (k === 1) {
@@ -95,7 +109,6 @@ var math = {
         if (!!this.check(result)) {
             result = "Result is too LARGE: " + result;
         }
-        
         return result;
     },
     
@@ -111,7 +124,7 @@ var math = {
             if (your_number < 0) { p = "-"; }
             else { p = ""; }   
         
-            r = Math.floor(Math.abs(your_number)).toString();
+            r = this.rd(Math.abs(your_number)).toString();
             f = r.split("").reverse();
         
             for (i; i<= Math.floor(f.length/4); i++) {
@@ -120,8 +133,7 @@ var math = {
             your_number = p + f.reverse().join("");
         } else {
             your_number = "INPUT ERROR: must be number";
-        }       
-      
+        }
       return your_number;
     },
     
@@ -133,9 +145,9 @@ var math = {
             array; //starting numbers
         
         if (Number(first) !== 0 && Number(second) !== 0 && Number(how_many) !== 0) {
-            first = Math.floor(first);
-            second = Math.floor(second);
-            how_many = Math.floor(how_many);
+            first = this.rd(first);
+            second = this.rd(second);
+            how_many = this.rd(how_many);
             array = [first, second];
             
             for (i = 2; i <= how_many + 1; i++) {
@@ -144,8 +156,7 @@ var math = {
             result = array.join(", ");
         } else {
           result = "INPUT ERROR: only accepts number and non-zero";
-        }        
-        
+        }
         return result;
     }
 };
