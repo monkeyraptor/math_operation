@@ -1,3 +1,5 @@
+//How to use this: https://github.com/monkeyraptor/math_operation
+
 var math = {
     check: function (a) {
         var result = 0;
