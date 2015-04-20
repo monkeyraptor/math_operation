@@ -9,7 +9,7 @@ Meanwhile, it consists of:
 
 2. Combination. Usage: `math.combination(n, k)`
 
-2. Permutation. Usage: `math.permutation(n, k)`
+3. Permutation. Usage: `math.permutation(n, k)`
 
    >n is **total number**
 
@@ -18,3 +18,9 @@ Meanwhile, it consists of:
    >As in `C(5, 2) = 10` or `P(5, 2) = 20`
    
    >Also, browser only *accomodates* 21 digits without compacting it with the *exponent*. So, that.
+   
+ 4. Adding comma for large integer. Usage: `math.addcomma(your_number)`
+ 
+   >`your_number` can be positive or negative. It has to be **number**.
+
+   >This isn't actually a math operation, more like *structuring-number-so-it-can-be-read*.
