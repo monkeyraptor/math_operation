@@ -64,6 +64,10 @@ Then:
       
       <script>
          //*custom_math.js* goes here. It can be in HTML or external.
+         
+         //If it's external and asynchronous read this gist: 
+         //https://gist.github.com/monkeyraptor/532517be33ead64e57f5
+         
          //Make sure you don't have global JS variable named *math*.
          //If you have that, then change the name of this library variable name.
          //It's at the beginning of the script, var math = { ...
