@@ -79,10 +79,10 @@ Then:
    <body>
    
       <!--your body content-->
-      
-      <!--For instance, this is the element to be injected with *combination* result-->
+     
       <p>
          So, blabla, something something, as such, we have the total ways of doing that, like:
+          <!--For instance, this is the element to be injected with *combination* result-->
          <div id="something"></div>
       </p>
       <script>
