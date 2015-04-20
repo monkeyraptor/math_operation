@@ -76,10 +76,15 @@ Then:
    
       <!--your body content-->
       
+      <!--For instance, this is the element to be injected with *combination* result-->
+      <p>
+         So, blabla, something something, as such, we have the total ways of doing that, like:
+         <div id="something"></div>
+      </p>
       <script>
          var your_element = document.getElementById("something");
          //for instance, invoking the *combination* function:
-         your_element.innerHTML = "Combination(5, 2) is " + math.combination(5, 2);
+         your_element.innerHTML = "Combination(5, 2) = " + math.combination(5, 2);
       </script>
       
    </body>
