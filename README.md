@@ -21,9 +21,14 @@ Meanwhile, it consists of:
    
 4. Adding comma for large integer. Usage: `math.addcomma(your_number)`
  
-   >`your_number` can be positive or negative. It has to be **number**.
+   >`your_number` can be positive or negative. It has to be **number** (**integer**). If it has decimal point, it will be rounded down to nearest integer.
 
-   >This isn't actually a math operation, more like *structuring-number-so-it-can-be-read*.
+   >Examples: 
+   - `math.addcomma(10000.8)` will generate output `10,000`.
+   
+   - `math.addcomma(-28900)` will generate output `-28,900`.
+
+   >This *isn't* actually a math operation, more like *structuring-number-so-it-can-be-read*.
    
 5. Generating Fibonacci sequence. Usage: `math.fibonacci(1st_number, 2nd_number, how_many)`
 
