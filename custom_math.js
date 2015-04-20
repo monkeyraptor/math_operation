@@ -118,7 +118,7 @@ var math = {
             array = [first, second]; //starting numbers
         
         if (!isNaN(i) && first !== 0 && second !== 0 && how_many !== 0) {
-            for (i = 2; i <= how_many; i++) {
+            for (i = 2; i <= (how_many + 1); i++) {
                 array.push(array[i - 1] + array[i - 2]);
             }
             result = array.join(", ");
