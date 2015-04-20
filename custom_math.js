@@ -109,6 +109,6 @@ var math = {
             a = "INPUT ERROR: must be number";
         }       
       
-      return a;
+        return a;
     }
 };
