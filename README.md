@@ -13,4 +13,4 @@ Meanwhile, it consists of:
 
    >k is the number of **combination** or **permutation**
    
-   >As in `C(5, 2) = 10**` or `**P(5, 2) = 20**`
+   >As in `C(5, 2) = 10` or `P(5, 2) = 20`
