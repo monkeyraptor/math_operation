@@ -9,15 +9,15 @@ Meanwhile, it consists of:
 
 1. **Factorial**. Usage: `math.factorial(n)`
 
-   >Example: `math.factorial(3)` will generate output `6`.
+   >Example: `math.factorial(3)` will generate output `6` (number).
 
 2. **Combination**. Usage: `math.combination(n, k)`
 
-   >Example: `math.combination(5, 2)` will generate output `10`.
+   >Example: `math.combination(5, 2)` will generate output `10` (number).
 
 3. **Permutation**. Usage: `math.permutation(n, k)`
   
-   >Example: `math.permutation(5, 2)` will generate output `20`.
+   >Example: `math.permutation(5, 2)` will generate output `20` (number).
 
    >n is **total number**
 
@@ -32,9 +32,9 @@ Meanwhile, it consists of:
    >`your_number` can be positive or negative. It has to be **number** (**integer**). If it has decimal point, it will be rounded down to nearest integer. Once again, browser only *accomodates* 21 digits before it is **compacted** using exponent.
 
    >Examples: 
-   - `math.addcomma(10000.8)` will generate output `10,000`.
+   - `math.addcomma(10000.8)` will generate output `10,000`. It is a `string` output.
    
-   - `math.addcomma(-28900251)` will generate output `-28,900,251`.
+   - `math.addcomma(-28900251)` will generate output `-28,900,251` (`string`).
 
    >This *isn't* actually a math operation, more like *structuring-number-so-it-can-be-read*.
    
@@ -46,7 +46,7 @@ Meanwhile, it consists of:
 
   >You have to provide all three arguments. Each has to be **non-zero**. And it will be rounded down to nearest integer if you put number with decimal point.
   
-  >Example: `math.fibonacci(-1, 2, 5)` will generate output: `-1, 2, 1, 3, 4, 7, 11`. It started from -1 and 2, then generated 5 additional numbers sequence.
+  >Example: `math.fibonacci(-1, 2, 5)` will generate output: `-1, 2, 1, 3, 4, 7, 11` (`string` output). It started from -1 and 2, then generated 5 additional numbers sequence.
   
   >Demo link: [on CodePen](http://codepen.io/monkeyraptor/pen/mqiuK/)
 
