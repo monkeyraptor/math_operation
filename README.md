@@ -36,6 +36,6 @@ Meanwhile, it consists of:
    
    Usage: `math.fibonacci(1st_number, 2nd_number, how_many)`
 
-  >You have to provide all three arguments. Each has to be **non-zero**.
+  >You have to provide all three arguments. Each has to be **non-zero**. And it will be rounded down to nearest integer if you put number with decimal point.
   
   >Example: `math.fibonacci(-1, 2, 5)` will generate output: `-1, 2, 1, 3, 4, 7, 11`. It started from -1 and 2, then generated 5 additional numbers sequence.
