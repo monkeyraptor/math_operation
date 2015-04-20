@@ -1,5 +1,5 @@
 # Math Operations
-*Some mathemathical functions in JavaScript*
+*Some mathematical functions in JavaScript*
 
 This is not overriding built-in Math method, just a custom function.
 
