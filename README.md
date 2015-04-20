@@ -82,8 +82,10 @@ Then:
          <div id="something"></div>
       </p>
       <script>
+         //this is the element with id *something*
          var your_element = document.getElementById("something");
-         //for instance, invoking the *combination* function:
+         
+         //invoking the *combination* function and injecting the result to that element:
          your_element.innerHTML = "Combination(5, 2) = " + math.combination(5, 2);
       </script>
       
