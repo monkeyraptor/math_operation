@@ -49,3 +49,32 @@ Meanwhile, it consists of:
   >Example: `math.fibonacci(-1, 2, 5)` will generate output: `-1, 2, 1, 3, 4, 7, 11`. It started from -1 and 2, then generated 5 additional numbers sequence.
   
   >Demo link: [on CodePen](http://codepen.io/monkeyraptor/pen/mqiuK/)
+
+##How to use it in HTML
+
+Grab the `custom_math.js`, you can compress it yourself.
+
+Then:
+```
+<html>
+   <head>
+      <!--your head content-->
+      <script>
+         //custom_math.js goes here. It can be in HTML or external.
+         //Make sure you don't have JS variable named math.
+         //If you have that, then change the name of this library variable name.
+         //It's at the beginning of the script, var math = { ...
+         //You can change the keyword of it.
+      </script>
+   </head>
+   
+   <body>
+      <!--your body content-->
+      <script>
+         var your_element = document.getElementById("something");
+         //for instance, the invoking the *combination* function:
+         your_element.innerHTML = "Combination(5, 2) is " + math.combination(5, 2);
+      </script>
+   </body>
+</html>
+```
