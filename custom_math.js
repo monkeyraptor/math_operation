@@ -1,5 +1,8 @@
 //How to use this: https://github.com/monkeyraptor/math_operation
 
+//Change this "math" keyword if it collided with your own JavaScript thingy.
+//For example, "goat".
+//Then to call the *factorial* function: goat.factorial(2).
 var math = {
     check: function (a) {
         var result = 0;
