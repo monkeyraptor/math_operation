@@ -19,7 +19,7 @@ Meanwhile, it consists of:
    
    >Also, browser only *accomodates* 21 digits without compacting it with the *exponent*. So, that.
    
- 4. Adding comma for large integer. Usage: `math.addcomma(your_number)`
+4. Adding comma for large integer. Usage: `math.addcomma(your_number)`
  
    >`your_number` can be positive or negative. It has to be **number**.
 
