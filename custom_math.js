@@ -11,6 +11,8 @@ var math = {
         return result;
     },
     
+    //*****************************************
+    //[1] Factorial
     factorial: function (n) {
         var i = 1, 
             result = 1;
@@ -31,6 +33,8 @@ var math = {
         return result;
     },
     
+    //*****************************************
+    //[2] Combination
     combination: function (n, k) {
         var start, 
             numerator = 1, 
@@ -62,7 +66,9 @@ var math = {
         
         return result;
     },
-
+    
+    //*****************************************
+    //[3] Permutation
     permutation: function (n, k) {
         var start, 
             numerator = 1,
@@ -90,6 +96,8 @@ var math = {
         return result;
     },
     
+    //*****************************************
+    //[4] Adding comma to large integer
     addcomma: function (your_number) {
         var f = [],
             p, 
@@ -114,6 +122,8 @@ var math = {
       return your_number;
     },
     
+    //*****************************************
+    //[5] Generating Fibonacci sequence
     fibonacci: function(first, second, how_many) {
         var i = 2,            
             result,            
