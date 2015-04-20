@@ -12,7 +12,7 @@ var math = {
     },
     
     //**************************************************
-    //Factorial
+    //[1] Factorial
     factorial: function (n) {
         var i = 1, 
             result = 1;
@@ -34,7 +34,7 @@ var math = {
     },
     
     //**************************************************
-    //Combination
+    //[2] Combination
     combination: function (n, k) {
         var start, 
             numerator = 1, 
@@ -68,7 +68,7 @@ var math = {
     },
     
     //**************************************************
-    //Permutation
+    //[3] Permutation
     permutation: function (n, k) {
         var start, 
             numerator = 1,
@@ -97,7 +97,7 @@ var math = {
     },
     
     //**************************************************
-    //Adding comma to large number
+    //[4] Adding comma to large number
     addcomma: function (your_number) {
         var f = [],
             p, 
@@ -123,7 +123,7 @@ var math = {
     },
     
     //**************************************************
-    //Generating Fibonacci sequence
+    //[5] Generating Fibonacci sequence
     fibonacci: function (first, second, how_many) {
         var i = 2,            
             result,
