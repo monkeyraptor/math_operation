@@ -1,6 +1,4 @@
 var math = {
-    //**************************************************
-    //checking large digit or infinity
     check: function (a) {
         var result = 0;
         
@@ -11,8 +9,6 @@ var math = {
         return result;
     },
     
-    //**************************************************
-    //[1] Factorial
     factorial: function (n) {
         var i = 1, 
             result = 1;
@@ -33,8 +29,6 @@ var math = {
         return result;
     },
     
-    //**************************************************
-    //[2] Combination
     combination: function (n, k) {
         var start, 
             numerator = 1, 
@@ -66,9 +60,7 @@ var math = {
         
         return result;
     },
-    
-    //**************************************************
-    //[3] Permutation
+
     permutation: function (n, k) {
         var start, 
             numerator = 1,
@@ -96,8 +88,6 @@ var math = {
         return result;
     },
     
-    //**************************************************
-    //[4] Adding comma to large number
     addcomma: function (your_number) {
         var f = [],
             p, 
@@ -122,15 +112,18 @@ var math = {
       return your_number;
     },
     
-    //**************************************************
-    //[5] Generating Fibonacci sequence
-    fibonacci: function (first, second, how_many) {
+    fibonacci: function(first, second, how_many) {
         var i = 2,            
-            result,
-            array = [first, second]; //starting numbers
+            result,            
+            array; //starting numbers
         
         if (Number(first) !== 0 && Number(second) !== 0 && Number(how_many) !== 0) {
-            for (i = 2; i <= (how_many + 1); i++) {
+            first = Math.floor(first);
+            second = Math.floor(second);
+            how_many = Math.floor(how_many);
+            array = [first, second];
+            
+            for (i = 2; i <= how_many + 1; i++) {
                 array.push(array[i - 1] + array[i - 2]);
             }
             result = array.join(", ");
