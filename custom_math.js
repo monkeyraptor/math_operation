@@ -1,7 +1,7 @@
 var math = {
     check: function (a) {
         var result = 0;
-        if (!!a.toString().match(/e\+/g) || !isFinite(a)) {
+        if (a.toString().length > 21 || !isFinite(a)) {
             result = 1;
         }
         return result;
@@ -19,7 +19,7 @@ var math = {
         } else {
             result = "INPUT ERROR: n >= 0";
         }
-        if (!!this.check) {
+        if (!!this.check(result)) {
             result = "Result is too LARGE: " + result;
         }
         return result;
@@ -49,7 +49,7 @@ var math = {
         } else {
             result = "INPUT ERROR: n >= k, n >= 0, k >= 0";
         }
-        if (!!this.check) {
+        if (!!this.check(result)) {
             result = "Result is too LARGE: " + result;
         }
         return result;
@@ -73,7 +73,7 @@ var math = {
         } else {
             result = "INPUT ERROR: n >= k, n >= 0, k >= 0";
         }
-        if (!!this.check) {
+        if (!!this.check(result)) {
             result = "Result is too LARGE: " + result;
         }
         return result;
