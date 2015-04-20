@@ -112,7 +112,7 @@ var math = {
       return your_number;
     },
     
-    fibonacci: function(first, second, how_many) {
+    fibonacci: function (first, second, how_many) {
         var i = 2,            
             result,
             array = [first, second]; //starting numbers
