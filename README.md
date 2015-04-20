@@ -24,3 +24,9 @@ Meanwhile, it consists of:
    >`your_number` can be positive or negative. It has to be **number**.
 
    >This isn't actually a math operation, more like *structuring-number-so-it-can-be-read*.
+   
+5. Generating Fibonacci sequence. Usage: `math.fibonacci(1st_number, 2nd_number, how_many)`
+
+  >You have to provide all three arguments. Each has to be **non-zero**.
+  
+  >Example `math.fibonacci(-1, 2, 5)` will generate output: `-1, 2, 1, 3, 4, 7, 11`.
