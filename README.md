@@ -52,7 +52,7 @@ Meanwhile, it consists of:
 
 ##How to use it in HTML
 
-Grab the `custom_math.js`, you can compress it yourself.
+Grab the [`custom_math.js`](https://github.com/monkeyraptor/math_operation/blob/master/custom_math.js), you can compress it yourself.
 
 Then:
 ```
