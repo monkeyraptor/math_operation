@@ -29,4 +29,4 @@ Meanwhile, it consists of:
 
   >You have to provide all three arguments. Each has to be **non-zero**.
   
-  >Example `math.fibonacci(-1, 2, 5)` will generate output: `-1, 2, 1, 3, 4, 7, 11`.
+  >Example `math.fibonacci(-1, 2, 5)` will generate output: `-1, 2, 1, 3, 4, 7, 11`. It started from -1 and 2, then generated 5 additional number sequence.
