@@ -88,27 +88,44 @@ var math = {
         return result;
     },
     
-    addcomma: function (a) {
+    addcomma: function (your_number) {
         var f = [],
             p, 
             r, 
             i = 1;            
           
-        if (!isNaN(a)){
-            if (a < 0) { p = "-"; }
+        if (!isNaN(your_number)){
+            if (your_number < 0) { p = "-"; }
             else { p = ""; }   
         
-            r = Math.floor(Math.abs(a)).toString();
+            r = Math.floor(Math.abs(your_number)).toString();
             f = r.split("").reverse();
         
             for (i; i<= Math.floor(f.length/4); i++) {
                 f.splice((4 * i - 1), 0, ",");
             }
-            a = p + f.reverse().join("");
+            your_number = p + f.reverse().join("");
         } else {
-            a = "INPUT ERROR: must be number";
+            your_number = "INPUT ERROR: must be number";
         }       
       
-        return a;
+      return your_number;
+    },
+    
+    fibonacci: function(first, second, how_many) {
+        var i = 2,            
+            result,
+            array = [first, second]; //starting numbers
+        
+        if (!isNaN(i) && first !== 0 && second !== 0 && how_many !== 0) {
+            for (i = 2; i <= how_many; i++) {
+                array.push(array[i - 1] + array[i - 2]);
+            }
+            result = array.join(", ");
+        } else {
+          result = "ERROR input: only accepts number and non-zero";
+        }        
+        
+        return result;
     }
 };
