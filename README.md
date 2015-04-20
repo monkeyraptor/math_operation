@@ -7,15 +7,19 @@ Meanwhile, it consists of:
 
 1. **Factorial**. Usage: `math.factorial(n)`
 
+   >Example: `math.factorial(3)` will generate output `6`.
+
 2. **Combination**. Usage: `math.combination(n, k)`
 
+   >Example: `math.combination(5, 2)` will generate output `10`.
+
 3. **Permutation**. Usage: `math.permutation(n, k)`
+  
+   >Example: `math.permutation(5, 2)` will generate output `20`.
 
    >n is **total number**
 
    >k is the number of **combination** or **permutation**
-   
-   >As in `C(5, 2) = 10` or `P(5, 2) = 20`
    
    >Also, browser only *accomodates* 21 digits without compacting it with the *exponent*. So, that.
    
