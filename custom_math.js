@@ -143,7 +143,7 @@ var math = {
             }
             result = array.join(", ");
         } else {
-          result = "ERROR input: only accepts number and non-zero";
+          result = "INPUT ERROR: only accepts number and non-zero";
         }        
         
         return result;
