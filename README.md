@@ -5,7 +5,9 @@ This is not overriding built-in Math method, just a custom function.
 
 Meanwhile, it consists of:
 
-1. Combination. Usage: `math.combination(n, k)`
+1. Factorial. Usage: `math.factorial(n)`
+
+2. Combination. Usage: `math.combination(n, k)`
 
 2. Permutation. Usage: `math.permutation(n, k)`
 
