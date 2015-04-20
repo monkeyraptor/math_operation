@@ -72,7 +72,7 @@ Then:
       <!--your body content-->
       <script>
          var your_element = document.getElementById("something");
-         //for instance, the invoking the *combination* function:
+         //for instance, invoking the *combination* function:
          your_element.innerHTML = "Combination(5, 2) is " + math.combination(5, 2);
       </script>
    </body>
