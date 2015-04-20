@@ -1,5 +1,5 @@
 # Math Operations
-*Some mathematical functions in JavaScript*
+***Some mathematical functions in JavaScript***
 
 This is not overriding built-in Math method, just a custom *module* with different functions combined.
 
@@ -57,8 +57,11 @@ Grab the [`custom_math.js`](https://github.com/monkeyraptor/math_operation/blob/
 Then:
 ```
 <html>
+
    <head>
+   
       <!--your head content-->
+      
       <script>
          //*custom_math.js* goes here. It can be in HTML or external.
          //Make sure you don't have global JS variable named *math*.
@@ -66,15 +69,20 @@ Then:
          //It's at the beginning of the script, var math = { ...
          //You can change the keyword of it.
       </script>
+      
    </head>
    
    <body>
+   
       <!--your body content-->
+      
       <script>
          var your_element = document.getElementById("something");
          //for instance, invoking the *combination* function:
          your_element.innerHTML = "Combination(5, 2) is " + math.combination(5, 2);
       </script>
+      
    </body>
+   
 </html>
 ```
