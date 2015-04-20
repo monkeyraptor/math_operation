@@ -102,15 +102,11 @@ var math = {
             f = r.split("").reverse();
         
             for (i; i<= Math.floor(f.length/4); i++) {
-              f.splice((4 * i - 1), 0, ",");
-            }        
-            
-            a = p + f.reverse().join("");   
-          
+                f.splice((4 * i - 1), 0, ",");
+            }
+            a = p + f.reverse().join("");
         } else {
-            if (a === "-"){ a = "-"; }
-            else if (a === "+"){ a = ""; }
-            else { a = "INPUT ERROR: must be number"; }
+            a = "INPUT ERROR: must be number";
         }       
       
       return a;
