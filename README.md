@@ -1,7 +1,9 @@
 # Math Operations
 *Some mathematical functions in JavaScript*
 
-This is not overriding built-in Math method, just a custom function.
+This is not overriding built-in Math method, just a custom *module* with different functions combined.
+
+I'll be adding more of them lator.
 
 Meanwhile, it consists of:
 
