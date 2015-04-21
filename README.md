@@ -64,11 +64,6 @@ Then:
       
       <script>
          //*custom_math.js* goes here. It can be in HTML or external.
-         
-         //If it's external and asynchronous, read either of these gists: 
-         //[1] https://gist.github.com/monkeyraptor/532517be33ead64e57f5
-         //[2] https://gist.github.com/monkeyraptor/339905bc5edc703b9f92
-         
          //Make sure you don't have global JS variable named *math*.
          //If you have that, then change the name of this library variable name.
          //It's at the beginning of the script, var math = { ...
@@ -98,3 +93,10 @@ Then:
    
 </html>
 ```
+###Loading externally and asynchronously
+
+If you load the script from *external* storage (not placed in the HTML) and *asynchronous*, read these gists:
+
+1. [Gist one](https://gist.github.com/monkeyraptor/532517be33ead64e57f5)
+
+2. [Gist two](https://gist.github.com/monkeyraptor/339905bc5edc703b9f92)
