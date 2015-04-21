@@ -193,7 +193,7 @@ var math = {
 
         if (!isNaN(a) && a !== 0) { //check if number and non-zero
             if (a < 0) { //rounding down and convert it to positive integer
-                a = this.rd(Math.abs(a));
+                a = this.rd(this.ab(a));
             }
 
             for (i; i <= a; i++) {
