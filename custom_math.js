@@ -21,6 +21,17 @@ var math = {
         return Math.floor(a);
     },
 
+    //absolute
+    ab: function (a) {
+        "use strict";
+        return Math.abs(a);
+    },
+
+    //square root
+    sqr: function (a) {
+        "use strict";
+        return Math.sqrt(a);
+    },
     //*****************************************
     //[1] Factorial
     factorial: function (n) {
@@ -129,7 +140,7 @@ var math = {
         if (!isNaN(your_number)) {
             if (your_number < 0) { p = "-"; } else { p = ""; }
 
-            r = this.rd(Math.abs(your_number)).toString();
+            r = this.rd(this.ab(your_number)).toString();
             f = r.split("").reverse();
 
             for (i; i <= this.rd(f.length / 4); i++) {
@@ -165,7 +176,7 @@ var math = {
         }
         return result;
     },
-    
+
     //*****************************************
     //[6] Get the factor of a positive integer
     factorof: function (a, b) {
@@ -184,7 +195,7 @@ var math = {
             if (a < 0) { //rounding down and convert it to positive integer
                 a = this.rd(Math.abs(a));
             }
-            
+
             for (i; i <= a; i++) {
                 if (a % i === 0) {
                     array.push(i);
@@ -230,6 +241,61 @@ var math = {
         } else {
             result = "INPUT ERROR: only accepts non-zero integer";
         }
+        return result;
+    },
+
+    //*****************************************
+    //[7] Checking prime number
+    prime_check: function (a) {
+        "use strict";
+        var result,
+            i = 2,
+            limit;
+
+        //maximum digit length = 21 (999,999,999,999,999,999,999)
+        if (a.toString().length < 21) {
+            if (!isNaN(a) && a > 1) {
+                limit = this.rd(this.sqr(a));
+                result = "PRIME number";
+
+                for (i; i <= limit; i++) {
+                    if (a % i === 0) {
+                        result = "Not a prime number";
+                        break;
+                    }
+                }
+
+            } else {
+                result = "INPUT ERROR: only positive integer > 1";
+            }
+
+        } else {
+            result = "INPUT ERROR: digit length <= 21";
+        }
+
+        return result;
+    },
+
+    //*****************************************
+    //[8] Generate prime numbers
+    generate_prime: function (start, how_many) {
+        "use strict";
+        var result,
+            primes = [];
+
+        if (Number(start) > 1 && Number(how_many) > 0) {
+            for (start;  how_many > 0;  start++) {
+                if (!this.prime_check(start).match(/not/gi)) {
+                    primes.push(start);
+                    --how_many;
+                }
+            }
+
+            result = primes.join(", ");
+        } else {
+            result = "INPUT ERROR: only positive integer, how_many > 0, start > 1";
+        }
+
         return result;
     }
 };
