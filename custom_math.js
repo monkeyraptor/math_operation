@@ -24,19 +24,19 @@ var math = {
     //rounding down
     rd: function (a) {
         "use strict";
-        return this.floor(a);
+        return Math.floor(a);
     },
 
     //absolute
     ab: function (a) {
         "use strict";
-        return this.abs(a);
+        return Math.abs(a);
     },
 
     //square root
     sqr: function (a) {
         "use strict";
-        return this.sqrt(a);
+        return Math.sqrt(a);
     },
     //*****************************************
     //[1] Factorial
