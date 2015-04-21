@@ -1,15 +1,9 @@
 //READTHIS: https://github.com/monkeyraptor/math_operation
 
 /*
- * Change math "math" global keyword if it collided with your own JavaScript thingy.
+ * Change this "math" keyword if it collided with your own JavaScript thingy.
  * For example, "goat".
  * Then to call the *factorial* function: goat.factorial(2).
- */
-
-/*
- * This is without "this" keyword.
- * All using absolute reference "math".
- * So, if you need to change it, make sure to change all "math" (all lowercase) keyword.
  */
 
 var math = {
@@ -17,7 +11,8 @@ var math = {
     check: function (a) {
         "use strict";
         var result = 0;
-
+        
+        //updated this (2015-04-21)
         if (!!a.toString().match(/error/gi)) {
             result = -1;
         } else if (a.toString().length > 21 || !isFinite(a)) {
@@ -50,9 +45,9 @@ var math = {
         "use strict";
         var i = 1,
             result = 1;
-        
+
         if (Number(n) >= 0) {
-            n = math.rd(n);
+            n = this.rd(n);
 
             if (n > 1) {
                 for (i; i <= n; i++) {
@@ -64,7 +59,7 @@ var math = {
         } else {
             result = "INPUT ERROR: n >= 0";
         }
-        if (math.check(result) > 0) {
+        if (this.check(result) > 0) { //updated this (2015-04-21)
             result = "Result is too LARGE: " + result;
         }
         return result;
@@ -81,10 +76,10 @@ var math = {
             result;
 
         if (n >= k && Number(n) >= 0 && Number(k) >= 0) {
-            n = math.rd(n);
-            k = math.rd(k);
+            n = this.rd(n);
+            k = this.rd(k);
 
-            if (n === k) {
+            if (n === k) { //updated this (2015-04-21)
                 result = 1;
             } else if (k === 1) {
                 result = n;
@@ -102,7 +97,7 @@ var math = {
         } else {
             result = "INPUT ERROR: n >= k, n >= 0, k >= 0";
         }
-        if (math.check(result) > 0) {
+        if (this.check(result) > 0) { //updated this (2015-04-21)
             result = "Result is too LARGE: " + result;
         }
         return result;
@@ -117,13 +112,13 @@ var math = {
             result;
 
         if (n >= k && Number(n) >= 0 && Number(k) >= 0) {
-            n = math.rd(n);
-            k = math.rd(k);
+            n = this.rd(n);
+            k = this.rd(k);
             
-            if (n === 0 || k === 0) {
+            if (n === 0 || k === 0) { //updated this part (2015-04-21)
                 result = 1;
-            } else if (n === k) {
-                result = math.factorial(n);
+            } else if (n === k) { //added this part
+                result = this.factorial(n);
             } else if (k === 1) {
                 result = n;
             } else {
@@ -136,7 +131,7 @@ var math = {
         } else {
             result = "INPUT ERROR: n >= k, n >= 0, k >= 0";
         }
-        if (math.check(result) > 0) { //updated math (2015-04-21)
+        if (this.check(result) > 0) { //updated this (2015-04-21)
             result = "Result is too LARGE: " + result;
         }
         return result;
@@ -154,10 +149,10 @@ var math = {
         if (!isNaN(your_number)) {
             if (your_number < 0) { p = "-"; } else { p = ""; }
 
-            r = math.rd(math.ab(your_number)).toString();
+            r = this.rd(this.ab(your_number)).toString();
             f = r.split("").reverse();
 
-            for (i; i <= math.rd(f.length / 4); i++) {
+            for (i; i <= this.rd(f.length / 4); i++) {
                 f.splice((4 * i - 1), 0, ",");
             }
             your_number = p + f.reverse().join("");
@@ -176,9 +171,9 @@ var math = {
             array; //starting numbers
 
         if (Number(first) !== 0 && Number(second) !== 0 && Number(how_many) !== 0) {
-            first = math.rd(first);
-            second = math.rd(second);
-            how_many = math.rd(how_many);
+            first = this.rd(first);
+            second = this.rd(second);
+            how_many = this.rd(how_many);
             array = [first, second];
 
             for (i = 2; i <= how_many + 1; i++) {
@@ -207,14 +202,15 @@ var math = {
 
         if (!isNaN(a) && a !== 0) { //check if number and non-zero
             if (a < 0) { //convert it to positive integer and round down
-                a = math.ab(math.rd(a));
+                a = this.ab(this.rd(a));
             }
+
             for (i; i <= a; i++) {
                 if (a % i === 0) {
                     array.push(i);
                 }
             }
-            
+
             if (Number(b) === 1) { //flag for displaying multiplication of the factors
                 a_l = array.length;
 
@@ -233,7 +229,7 @@ var math = {
                         array.push(left[k] + " * " + right[k]);
                     }
                 } else { //for odd array length
-                    divider = math.rd(a_l / 2);
+                    divider = this.rd(a_l / 2);
 
                     for (j; j < divider; j++) {
                         left.push(array[j]);
@@ -273,8 +269,8 @@ var math = {
         //maximum digit length = 21 (999,999,999,999,999,999,999)
         if (a.toString().length < 21) {
             if (!isNaN(a) && a > 1) {
-                a = math.rd(a);
-                limit = math.rd(math.sqr(a));
+                a = this.rd(a);
+                limit = this.rd(this.sqr(a));
                 result = "PRIME number";
 
                 for (i; i <= limit; i++) {
@@ -303,11 +299,11 @@ var math = {
             primes = [];
 
         if (Number(start) > 1 && Number(how_many) > 0) {
-            start = math.rd(start);
-            how_many = math.rd(how_many);
+            start = this.rd(start);
+            how_many = this.rd(how_many);
 
             for (start;  how_many > 0;  start++) {
-                if (!math.prime_check(start).match(/not/gi)) {
+                if (!this.prime_check(start).match(/not/gi)) {
                     primes.push(start);
                     --how_many;
                 }
