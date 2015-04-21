@@ -209,13 +209,12 @@ var math = {
             if (a < 0) { //convert it to positive integer and round down
                 a = math.ab(math.rd(a));
             }
-
             for (i; i <= a; i++) {
                 if (a % i === 0) {
                     array.push(i);
                 }
             }
-
+            
             if (Number(b) === 1) { //flag for displaying multiplication of the factors
                 a_l = array.length;
 
@@ -249,9 +248,14 @@ var math = {
                         array.push(left[k] + " * " + right[k]);
                     }
                 }
+            } else if (Number(b) !== 0 && Number(b) !== 1) {
+                array = ["no", "such", "flag!"];
             }
-
-            result = array.join(", ");
+            if (!!array[1].toString().match(/such/gi)) {
+                result = array.join(" ");
+            }  else {
+                result = array.join(", ");
+            }
         } else {
             result = "INPUT ERROR: only accepts non-zero integer";
         }
