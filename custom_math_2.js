@@ -80,7 +80,7 @@ var math = {
             i = 1,
             result;
 
-        if (n >= k && Number(n) >= 0 && Number(k) >= 0) {
+        if (n - k >= 0 && n >= 0 && k >= 0)  {
             n = math.rd(n);
             k = math.rd(k);
 
@@ -116,7 +116,7 @@ var math = {
             numerator = 1,
             result;
 
-        if (n >= k && Number(n) >= 0 && Number(k) >= 0) {
+        if (n - k >= 0 && n >= 0 && k >= 0) {
             n = math.rd(n);
             k = math.rd(k);
             
