@@ -165,7 +165,7 @@ var math = {
         }
         return result;
     },
-
+    
     //*****************************************
     //[6] Get the factor of a positive integer
     factorof: function (a, b) {
@@ -180,11 +180,11 @@ var math = {
             a_l,
             divider;
 
-        if (!isNaN(a) && !a) {
-            if (a < 0) { //making negative input positive
-                a = Math.floor(Math.abs(a));
+        if (!isNaN(a) && a !== 0) { //check if number and non-zero
+            if (a < 0) { //rounding down and convert it to positive integer
+                a = this.rd(Math.abs(a));
             }
-
+            
             for (i; i <= a; i++) {
                 if (a % i === 0) {
                     array.push(i);
@@ -194,7 +194,7 @@ var math = {
             if (!!b) { //flag for displaying multiplication of the factors
                 a_l = array.length;
 
-                if (a_l % 2 === 0) {
+                if (a_l % 2 === 0) { //if the array length is even
                     divider = a_l / 2;
 
                     for (j; j < divider; j++) {
@@ -208,7 +208,7 @@ var math = {
                     for (k; k < left.length; k++) {
                         array.push(left[k] + " * " + right[k]);
                     }
-                } else {
+                } else { //for odd array length
                     divider = this.rd(a_l / 2);
 
                     for (j; j < divider; j++) {
@@ -217,6 +217,7 @@ var math = {
                     }
 
                     left.push(array[divider]);
+                    right.reverse();
                     right.push(left[left.length - 1]);
                     array = [];
 
