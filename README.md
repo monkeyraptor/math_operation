@@ -96,7 +96,7 @@ Meanwhile, it consists of:
 Grab the [`custom_math.js`](https://github.com/monkeyraptor/math_operation/blob/master/custom_math.js), you can compress it yourself (recommended [`tool`](http://gpbmike.github.io/refresh-sf/)).
 
 Then:
-```
+```html
 <html>
 
    <head>
