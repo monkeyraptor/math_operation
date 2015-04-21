@@ -1,10 +1,10 @@
-//How to use this: https://github.com/monkeyraptor/math_operation
+//READTHIS: https://github.com/monkeyraptor/math_operation
 
 /*
  * Change this "math" keyword if it collided with your own JavaScript thingy.
  * For example, "goat".
  * Then to call the *factorial* function: goat.factorial(2).
-*/
+ */
 
 var math = {
     //checking above 21 digit length or infinity
