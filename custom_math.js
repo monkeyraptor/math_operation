@@ -11,8 +11,7 @@ var math = {
     check: function (a) {
         "use strict";
         var result = 0;
-        
-        //updated this (2015-04-21)
+
         if (!!a.toString().match(/error/gi)) {
             result = -1;
         } else if (a.toString().length > 21 || !isFinite(a)) {
@@ -25,19 +24,19 @@ var math = {
     //rounding down
     rd: function (a) {
         "use strict";
-        return Math.floor(a);
+        return this.floor(a);
     },
 
     //absolute
     ab: function (a) {
         "use strict";
-        return Math.abs(a);
+        return this.abs(a);
     },
 
     //square root
     sqr: function (a) {
         "use strict";
-        return Math.sqrt(a);
+        return this.sqrt(a);
     },
     //*****************************************
     //[1] Factorial
@@ -45,21 +44,20 @@ var math = {
         "use strict";
         var i = 1,
             result = 1;
-
-        if (Number(n) >= 0) {
-            n = this.rd(n);
-
-            if (n > 1) {
+        console.log(n);
+        if (!isNaN(n) && n > -1) {
+            if (n === 0 && n === 1) {
+                result = 1;
+            } else if (n > 1) {
+                n = this.rd(n);
                 for (i; i <= n; i++) {
                     result *= i;
                 }
-            } else {
-                result = 1;
             }
         } else {
             result = "INPUT ERROR: n >= 0";
         }
-        if (this.check(result) > 0) { //updated this (2015-04-21)
+        if (this.check(result) > 0) {
             result = "Result is too LARGE: " + result;
         }
         return result;
@@ -79,7 +77,7 @@ var math = {
             n = this.rd(n);
             k = this.rd(k);
 
-            if (n === k) { //updated this (2015-04-21)
+            if (n === k) {
                 result = 1;
             } else if (k === 1) {
                 result = n;
@@ -97,7 +95,7 @@ var math = {
         } else {
             result = "INPUT ERROR: n >= k, n >= 0, k >= 0";
         }
-        if (this.check(result) > 0) { //updated this (2015-04-21)
+        if (this.check(result) > 0) {
             result = "Result is too LARGE: " + result;
         }
         return result;
@@ -114,10 +112,9 @@ var math = {
         if (n - k >= 0 && n >= 0 && k >= 0) {
             n = this.rd(n);
             k = this.rd(k);
-            
-            if (n === 0 || k === 0) { //updated this part (2015-04-21)
+            if (n === 0 || k === 0) {
                 result = 1;
-            } else if (n === k) { //added this part
+            } else if (n === k) {
                 result = this.factorial(n);
             } else if (k === 1) {
                 result = n;
@@ -204,13 +201,12 @@ var math = {
             if (a < 0) { //convert it to positive integer and round down
                 a = this.ab(this.rd(a));
             }
-
             for (i; i <= a; i++) {
                 if (a % i === 0) {
                     array.push(i);
                 }
             }
-
+            
             if (Number(b) === 1) { //flag for displaying multiplication of the factors
                 a_l = array.length;
 
