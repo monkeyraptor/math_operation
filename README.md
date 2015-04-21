@@ -32,9 +32,8 @@ Meanwhile, it consists of:
    >`your_number` can be positive or negative. It has to be **number** (**integer**). If it has decimal point, it will be rounded down to nearest integer. Once again, browser only *accomodates* 21 digits before it is **compacted** using exponent.
 
    >Examples: 
-   - `math.addcomma(10000.8)` will generate output `10,000`. It is a `string` output.
-   
-   - `math.addcomma(-28900251)` will generate output `-28,900,251` (`string`).
+   >- `math.addcomma(10000.8)` will generate output `10,000`. It is a `string` output.
+   >- `math.addcomma(-28900251)` will generate output `-28,900,251` (`string`).
 
    >This *isn't* actually a math operation, more like *structuring-number-so-it-can-be-read*.
    
@@ -56,9 +55,9 @@ Meanwhile, it consists of:
   
    >It has `flag`. `0` to return only the factors (string). `1` to return list of multiplications of the factors.
    
-   >Example:
-   - `math.factorof(625, 0)` or just `math.factorof(625)` will generate output `1, 5, 25, 125, 625` (string).
-   - `math.factorof(625, 1)` will generate output `1 * 625, 5 * 125, 25 * 25` (string).
+   >Examples:
+   >- `math.factorof(625, 0)` or just `math.factorof(625)` will generate output `1, 5, 25, 125, 625` (string).
+   >- `math.factorof(625, 1)` will generate output `1 * 625, 5 * 125, 25 * 25` (string).
 
 
 ##How to use it in HTML
