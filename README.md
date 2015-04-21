@@ -50,6 +50,17 @@ Meanwhile, it consists of:
   
   >Demo link: [on CodePen](http://codepen.io/monkeyraptor/pen/mqiuK/)
 
+6. **Get the factors of positive integer**.
+   
+   Usage: `math.factorof(the_number, flag)`
+  
+   >It has `flag`. `0` to return only the factors (string). `1` to return list of multiplications of the factors.
+   
+   >Example:
+   - `math.factorof(625, 0)` or just `math.factorof(625)` will generate output `1, 5, 25, 125, 625` (string).
+   - `math.factorof(625, 1)` will generate output `1 * 625, 5 * 125, 25 * 25` (string).
+
+
 ##How to use it in HTML
 
 Grab the [`custom_math.js`](https://github.com/monkeyraptor/math_operation/blob/master/custom_math.js), you can compress it yourself.
