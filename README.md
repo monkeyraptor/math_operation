@@ -7,15 +7,21 @@ I'll be adding more of them lator. Feel free to add more or fork or whatever.
 
 Meanwhile, it consists of:
 
-1. **Factorial**. Usage: `math.factorial(n)`
+###1. **Factorial**
+
+   Usage: `math.factorial(n)`
 
    >Example: `math.factorial(3)` will generate output `6` (number).
 
-2. **Combination**. Usage: `math.combination(n, k)`
+###2. **Combination**
+
+   Usage: `math.combination(n, k)`
 
    >Example: `math.combination(5, 2)` will generate output `10` (number).
 
-3. **Permutation**. Usage: `math.permutation(n, k)`
+###3. **Permutation**
+
+   Usage: `math.permutation(n, k)`
   
    >Example: `math.permutation(5, 2)` will generate output `20` (number).
 
@@ -25,7 +31,7 @@ Meanwhile, it consists of:
    
    >Also, browser only *accommodates* 21 digits without compacting it with the *exponent*. So, that.
    
-4. **Adding comma for large integer**.
+###4. **Adding comma for large integer**
    
    Usage: `math.addcomma(your_number)`
  
@@ -39,7 +45,7 @@ Meanwhile, it consists of:
    
    >Explanation link: [on Monkey Raptor](http://monkeyraptor.johanpaul.net/2014/06/doodle-formatting-integer-with.html)
    
-5. **Generating Fibonacci sequence**.
+###5. **Generating Fibonacci sequence**
    
    Usage: `math.fibonacci(1st_number, 2nd_number, how_many)`
 
@@ -49,7 +55,7 @@ Meanwhile, it consists of:
   
   >Demo link: [on CodePen](http://codepen.io/monkeyraptor/pen/mqiuK/)
 
-6. **Get the factors of positive integer**.
+###6. **Get the factors of positive integer**
    
    Usage: `math.factorof(the_number, flag)`
   
@@ -61,7 +67,7 @@ Meanwhile, it consists of:
    >- `math.factorof(625, 0)` or just `math.factorof(625)` will generate output `1, 5, 25, 125, 625` (string).
    >- `math.factorof(625, 1)` will generate output `1 * 625, 5 * 125, 25 * 25` (string).
 
-7. **Check prime number**.
+###7. **Check prime number**
    
    Usage: `math.prime_check(the_number)`
   
@@ -73,7 +79,7 @@ Meanwhile, it consists of:
 
    >Demo with user interface [on PortRaptor](http://portraptor.blogspot.com/2014/04/prime-number-checker.html)
 
-8. **Generate prime numbers**.
+###8. **Generate prime numbers**
    
    Usage: `math.generate_prime(start_from, how_many)`
   
