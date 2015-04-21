@@ -59,6 +59,29 @@ Meanwhile, it consists of:
    >- `math.factorof(625, 0)` or just `math.factorof(625)` will generate output `1, 5, 25, 125, 625` (string).
    >- `math.factorof(625, 1)` will generate output `1 * 625, 5 * 125, 25 * 25` (string).
 
+7. **Check prime number**.
+   
+   Usage: `math.prime_check(the_number)`
+  
+   >The `the_number` has to be greater than 1 and an integer.
+   
+   >Examples:
+   >- `math.prime_check(210000000)` will generate output `Not a prime number` (string).
+   >- `math.prime_check(31)` will generate output `PRIME number` (string).
+
+   >Demo with user interface [on PortRaptor](http://portraptor.blogspot.com/2014/04/prime-number-checker.html)
+
+8. **Generate prime numbers**.
+   
+   Usage: `math.generate_prime(start_from, how_many)`
+  
+   >The `start_from` has to be greater than 1 and an integer. `how_many` has to be larger than 0.
+   
+   >Examples:
+   >- `math.generate_prime(2, 3)` will generate output `2, 3, 5` (string).
+   >- `math.generate_prime(4, 1)` will generate output `5` (string).
+
+   >Demo with user interface [on PortRaptor](http://portraptor.blogspot.com/2014/05/prime-number-generator-by-monkey-raptor.html)
 
 ##How to use it in HTML
 
