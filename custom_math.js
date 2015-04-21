@@ -166,6 +166,8 @@ var math = {
         return result;
     },
 
+    //*****************************************
+    //[6] Get the factor of a positive integer
     factorof: function (a, b) {
         "use strict";
         var result,
