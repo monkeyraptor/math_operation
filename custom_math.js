@@ -255,6 +255,7 @@ var math = {
         //maximum digit length = 21 (999,999,999,999,999,999,999)
         if (a.toString().length < 21) {
             if (!isNaN(a) && a > 1) {
+                a = this.rd(a);
                 limit = this.rd(this.sqr(a));
                 result = "PRIME number";
 
@@ -284,6 +285,9 @@ var math = {
             primes = [];
 
         if (Number(start) > 1 && Number(how_many) > 0) {
+            start = this.rd(start);
+            how_many = this.rd(how_many);
+
             for (start;  how_many > 0;  start++) {
                 if (!this.prime_check(start).match(/not/gi)) {
                     primes.push(start);
