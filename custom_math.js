@@ -8,10 +8,14 @@ var math = {
     check: function (a) {
         "use strict";
         var result = 0;
-
-        if (a.toString().length > 21 || !isFinite(a)) {
+        
+        //updated this (2015-04-21)
+        if (!!a.toString().match(/error/gi)) {
+            result = -1;
+        } else if (a.toString().length > 21 || !isFinite(a)) {
             result = 1;
         }
+        
         return result;
     },
 
@@ -52,7 +56,7 @@ var math = {
         } else {
             result = "INPUT ERROR: n >= 0";
         }
-        if (!!this.check(result)) {
+        if (this.check(result) > 0) { //updated this (2015-04-21)
             result = "Result is too LARGE: " + result;
         }
         return result;
@@ -72,7 +76,7 @@ var math = {
             n = this.rd(n);
             k = this.rd(k);
 
-            if (n === k || k === 0) {
+            if (n === k) { //updated this (2015-04-21)
                 result = 1;
             } else if (k === 1) {
                 result = n;
@@ -90,7 +94,7 @@ var math = {
         } else {
             result = "INPUT ERROR: n >= k, n >= 0, k >= 0";
         }
-        if (!!this.check(result)) {
+        if (this.check(result) > 0) { //updated this (2015-04-21)
             result = "Result is too LARGE: " + result;
         }
         return result;
@@ -107,9 +111,11 @@ var math = {
         if (n >= k && Number(n) >= 0 && Number(k) >= 0) {
             n = this.rd(n);
             k = this.rd(k);
-
-            if (n === k || k === 0) {
+            
+            if (n === 0 || k === 0) { //updated this part (2015-04-21)
                 result = 1;
+            } else if (n === k) { //added this part
+                result = this.factorial(n);
             } else if (k === 1) {
                 result = n;
             } else {
@@ -122,7 +128,7 @@ var math = {
         } else {
             result = "INPUT ERROR: n >= k, n >= 0, k >= 0";
         }
-        if (!!this.check(result)) {
+        if (this.check(result) > 0) { //updated this (2015-04-21)
             result = "Result is too LARGE: " + result;
         }
         return result;
