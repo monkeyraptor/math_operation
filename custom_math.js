@@ -217,8 +217,7 @@ var math = {
                     }
 
                     left.push(array[divider]);
-                    right.reverse();
-                    right.push(left[left.length - 1]);
+                    right.reverse().push(left[left.length - 1]);
                     array = [];
 
                     for (k; k < left.length; k++) {
