@@ -216,7 +216,7 @@ var math = {
                 }
             }
 
-            if (!!b) { //flag for displaying multiplication of the factors
+            if (b > 0) { //flag for displaying multiplication of the factors
                 a_l = array.length;
 
                 if (a_l % 2 === 0) { //if the array length is even
