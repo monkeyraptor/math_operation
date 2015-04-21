@@ -164,5 +164,70 @@ var math = {
             result = "INPUT ERROR: only accepts number and non-zero";
         }
         return result;
+    },
+
+    factorof: function (a, b) {
+        "use strict";
+        var result,
+            i = 1,
+            j = 0,
+            k = 0,
+            array = [],
+            left = [],
+            right = [],
+            a_l,
+            divider;
+
+        if (!isNaN(a) && !a) {
+            if (a < 0) { //making negative input positive
+                a = Math.floor(Math.abs(a));
+            }
+
+            for (i; i <= a; i++) {
+                if (a % i === 0) {
+                    array.push(i);
+                }
+            }
+
+            if (!!b) { //flag for displaying multiplication of the factors
+                a_l = array.length;
+
+                if (a_l % 2 === 0) {
+                    divider = a_l / 2;
+
+                    for (j; j < divider; j++) {
+                        left.push(array[j]);
+                        right.push(array[j + divider]);
+                    }
+
+                    right.reverse();
+                    array = [];
+
+                    for (k; k < left.length; k++) {
+                        array.push(left[k] + " * " + right[k]);
+                    }
+                } else {
+                    divider = this.rd(a_l / 2);
+
+                    for (j; j < divider; j++) {
+                        left.push(array[j]);
+                        right.push(array[j + divider + 1]);
+                    }
+
+                    left.push(array[divider]);
+                    right.push(left[left.length - 1]);
+                    array = [];
+
+                    for (k; k < left.length; k++) {
+                        array.push(left[k] + " * " + right[k]);
+                    }
+                }
+            }
+
+            result = array.join(", ");
+        } else {
+            result = "INPUT ERROR: only accepts non-zero integer";
+        }
+        return result;
     }
 };
