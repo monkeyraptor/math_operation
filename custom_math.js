@@ -192,8 +192,8 @@ var math = {
             divider;
 
         if (!isNaN(a) && a !== 0) { //check if number and non-zero
-            if (a < 0) { //rounding down and convert it to positive integer
-                a = this.rd(this.ab(a));
+            if (a < 0) { //convert it to positive integer and round down
+                a = this.ab(this.rd(a));
             }
 
             for (i; i <= a; i++) {
