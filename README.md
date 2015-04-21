@@ -93,10 +93,11 @@ Then:
    
 </html>
 ```
+
 ###Loading externally and asynchronously
 
-If you load the script from *external* storage (not placed in the HTML) and *asynchronous*, read these gists:
+For loading the script from *external* storage (not placed in the HTML) and *asynchronous*, read these gists:
 
-1. [Gist one](https://gist.github.com/monkeyraptor/532517be33ead64e57f5)
+1. [`Gist one`](https://gist.github.com/monkeyraptor/532517be33ead64e57f5): using `script` tag with `async` attribute and using timer to detect the *readiness* of the external script.
 
-2. [Gist two](https://gist.github.com/monkeyraptor/339905bc5edc703b9f92)
+2. [`Gist two`](https://gist.github.com/monkeyraptor/339905bc5edc703b9f92): inject the `script` element via JS plus.
