@@ -23,13 +23,13 @@ Meanwhile, it consists of:
 
    >k is the number of **combination** or **permutation**
    
-   >Also, browser only *accomodates* 21 digits without compacting it with the *exponent*. So, that.
+   >Also, browser only *accommodates* 21 digits without compacting it with the *exponent*. So, that.
    
 4. **Adding comma for large integer**.
    
    Usage: `math.addcomma(your_number)`
  
-   >`your_number` can be positive or negative. It has to be **number** (**integer**). If it has decimal point, it will be rounded down to nearest integer. Once again, browser only *accomodates* 21 digits before it is **compacted** using exponent.
+   >`your_number` can be positive or negative. It has to be **number** (**integer**). If it has decimal point, it will be rounded down to nearest integer. Once again, browser only *accommodates* 21 digits before it is **compacted** using exponent.
 
    >Examples: 
    >- `math.addcomma(10000.8)` will generate output `10,000`. It is a `string` output.
@@ -55,6 +55,8 @@ Meanwhile, it consists of:
   
    >It has `flag`. `0` to return only the factors (string). `1` to return list of multiplications of the factors.
    
+   >This is using iterations, so put considerably *small* input to avoid browser crash. It should work fine with max 5 digits length (99,999) input. *I didn't put actual limit in this*.
+
    >Examples:
    >- `math.factorof(625, 0)` or just `math.factorof(625)` will generate output `1, 5, 25, 125, 625` (string).
    >- `math.factorof(625, 1)` will generate output `1 * 625, 5 * 125, 25 * 25` (string).
