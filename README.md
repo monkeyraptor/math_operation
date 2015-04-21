@@ -3,6 +3,12 @@
 
 This is not overriding built-in `Math()` method, just a custom *module* with different functions combined.
 
+## DEMO
+
+[`At CodePen`](http://codepen.io/monkeyraptor/full/YXzPvN/)
+
+>The demo uses the `custom_math_2.js`. The difference is, that one doesn't have `this` keyword.
+
 I'll be adding more of them lator. Feel free to add more or fork or whatever.
 
 Meanwhile, it consists of:
