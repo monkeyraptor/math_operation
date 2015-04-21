@@ -44,7 +44,7 @@ var math = {
         "use strict";
         var i = 1,
             result = 1;
-        console.log(n);
+        
         if (!isNaN(n) && n > -1) {
             if (n === 0 && n === 1) {
                 result = 1;
