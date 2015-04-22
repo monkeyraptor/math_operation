@@ -173,7 +173,7 @@ var math = {
             result,
             array; //starting numbers
 
-        if (!isNaN(first) && !isNaN(second) && Number(how_many) > 0) { //allows 1st and 2nd numbers to be 0, but not *how_many*
+        if (!isNaN(first) && !isNaN(second) && Number(how_many) > 0) {
             first = math.rd(first);
             second = math.rd(second);
             how_many = math.rd(how_many);
@@ -317,5 +317,59 @@ var math = {
         }
 
         return result;
+    },
+
+    //*****************************************
+    //[9] Generate Pascal's triangle sequence (one particular line or many lines)
+    pascal_triangle: function (a, b) {
+        "use strict";
+        var array = [],
+            i = 0,
+            j,
+            k = 0,
+            result = {}, 
+            store = [];
+            
+        //SPLENDID method from http://www.ywhmaths.webs.com/Arithmetic/Pascal.html
+        function pt(n, r) { //pt as in *Pascal's Triangle*
+            var buffer;
+            if (n > 1 && r > 0 && r < n) {
+                buffer = pt(n - 1, r - 1) + pt(n - 1, r);
+            } else {  
+                buffer = 1;
+            }
+            return buffer;                
+        }
+        
+        if (Number(a) > 0) {
+            a = math.rd(a); //round down
+            
+            for (i; i < a; i++) {
+                j = 0;
+                array = []; //empty the *array* buffer
+                for (j; j <= i; j++) {
+                    array.push(pt(i, j)); //fill it again
+                }
+                result[i] = array; //fill the *result* object with the *array*
+            }    
+            
+            if (Number(b) === 0) { //only a particular line                
+                result = result[a - 1].join(", "); //array to string
+                
+            } else if (Number(b) === 1) { //all lines until the limit number given                
+                for (k; k < a; k++) {
+                    store.push(result[k].join(" ")); //this can be changed to fit your layout.
+                }
+                result = store.join(" | "); //this can be changed to fit your layout.
+                
+            } else {                
+                result = "INPUT ERROR: 0 or 1 for flag";
+                
+            }
+        } else {
+            result = "INPUT ERROR: must be natural number (N*)";
+        }
+
+        return result; //string
     }
 };
