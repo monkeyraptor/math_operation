@@ -167,7 +167,7 @@ var math = {
             result,
             array; //starting numbers
 
-        if (Number(how_many) !== 0) { //allows 1st and 2nd number to be 0
+        if (Number(how_many) !== 0) { //allows 1st and 2nd numbers to be 0, but not *how_many*
             first = this.rd(first);
             second = this.rd(second);
             how_many = this.rd(how_many);
