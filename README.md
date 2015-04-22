@@ -101,6 +101,21 @@ Meanwhile, it consists of:
 
    >Demo with user interface [on PortRaptor](http://portraptor.blogspot.com/2014/05/prime-number-generator-by-monkey-raptor.html)
 
+###9. **Generate Pascal's triangle sequence**
+   
+   Usage: `math.pascal_triangle(which_line [or] how_many, flag)`
+  
+   >The `which_line [or] how_many` has to be greater than 0 and an integer. `flag` can be 0 or 1.
+   
+   > - `flag` 0 is for generating a particular line of Pascal's triangle sequence.
+   > - `flag` 1 is for generating all lines of Pascal's triangle sequence until the given limit.
+   
+   >Examples:
+   >- `math.pascal_triangle(2, 0)` will generate output `1, 1` (string).
+   >- `math.generate_prime(3, 1)` will generate output `1 | 1 1 | 1 2 1` (string).
+   
+   > Credit for neat example `www.ywhmaths.webs.com/Arithmetic/Pascal.html`
+
 ##How to use it in HTML
 
 Grab the [`custom_math.js`](https://github.com/monkeyraptor/math_operation/blob/master/custom_math.js), you can compress it yourself (recommended [`tool`](http://gpbmike.github.io/refresh-sf/)).
