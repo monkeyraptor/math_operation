@@ -105,7 +105,7 @@ Meanwhile, it consists of:
    
    Usage: `math.pascal_triangle(which_line [or] how_many, flag)`
   
-   >The `which_line [or] how_many` has to be greater than 0 and an integer. `flag` can be 0 or 1.
+   >The `which_line [or] how_many` has to be natural number (N*). `flag` can be 0 or 1.
    
    > - `flag` 0 is for generating a particular line of Pascal's triangle sequence.
    > - `flag` 1 is for generating all lines of Pascal's triangle sequence until the given limit.
