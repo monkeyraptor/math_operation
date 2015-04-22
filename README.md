@@ -57,7 +57,7 @@ Meanwhile, it consists of:
    
    Usage: `math.fibonacci(1st_number, 2nd_number, how_many)`
 
-  >You have to provide all three arguments. Each has to be **non-zero**. And it will be rounded down to nearest integer if you put number with decimal point.
+  >You have to provide all three arguments. ~~Each has to be **non-zero**~~ `1st_number` and `2nd_number` can be zero and `how_many` has to be **greater than 0**. It will also be rounded down to nearest integer if you put number with decimal point.
   
   >Example: `math.fibonacci(-1, 2, 5)` will generate output: `-1, 2, 1, 3, 4, 7, 11` (`string` output). It started from -1 and 2, then generated 5 additional numbers sequence.
   
@@ -70,6 +70,8 @@ Meanwhile, it consists of:
    >It has `flag`. `0` to return only the factors (string). `1` to return list of multiplications of the factors.
    
    >This is using iterations, so put considerably *small* input to avoid browser crash. It should work fine with max 5 digits length (99,999) input. *I didn't put actual limit in this*.
+   
+   >If the input is negative, it will be converted into positive.
 
    >Examples:
    >- `math.factorof(625, 0)` or just `math.factorof(625)` will generate output `1, 5, 25, 125, 625` (string).
