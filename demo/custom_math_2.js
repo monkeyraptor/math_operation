@@ -173,7 +173,7 @@ var math = {
             result,
             array; //starting numbers
 
-        if (Number(first) !== 0 && Number(second) !== 0 && Number(how_many) !== 0) {
+        if (!!Number(first) && !!Number(second) && Number(how_many) > 0) { //allows 1st and 2nd numbers to be 0, but not *how_many*
             first = math.rd(first);
             second = math.rd(second);
             how_many = math.rd(how_many);
@@ -184,7 +184,7 @@ var math = {
             }
             result = array.join(", ");
         } else {
-            result = "INPUT ERROR: only accepts number and non-zero";
+            result = "INPUT ERROR: only accepts integer for 1st and 2nd numbers, and natural number for 3rd number (N*)";
         }
         return result;
     },
