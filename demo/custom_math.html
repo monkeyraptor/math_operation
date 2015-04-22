@@ -30,6 +30,7 @@
                     <li>Get Factors:<br><mark>math.factorof(integer, flag)</mark></li>
                     <li>Prime Check:<br><mark>math.prime_check(integer)</mark></li>
                     <li>Generating Primes:<br><mark>math.generate_prime(start, how_many)</mark></li>
+                    <li>Pascal's Triangle:<br><mark>math.pascal_triangle(how_many, flag)</mark></li>
                 </ol>
                 <hr>
                     Project at GitHub: <a class="green" title="new window" href="https://github.com/monkeyraptor/math_operation" target="_blank">github.com/monkeyraptor/math_operation</a>
@@ -93,7 +94,14 @@
 
                             "This needs two arguments<hr><mark>math.generate_prime(start_num, how_many)</mark><hr>Example:<br><br><mark>math.generate_prime(3, 7)</mark>", 
                             
-                            2]
+                            2],
+                            
+    //[9] math.pascal_triangle(how_many, flag)
+    "math.pascal_triangle": [math.pascal_triangle,
+
+                            "This needs two arguments<hr><mark>math.pascal_triangle(how_many, flag)</mark><hr><mark>flag</mark> <u>0</u> is for getting the particular number sequence line of Pascal's triangle and the <u>1</u> is to show all lines until the given limit<hr> Example:<br><br><mark>math.pascal_triangle(10, 0)</mark>", 
+                            
+                            2]                                
                     },
                     run_btn = d.getElementById("run_btn"),
                     input_text = d.getElementById("input"),
