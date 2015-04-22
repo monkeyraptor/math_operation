@@ -167,7 +167,7 @@ var math = {
             result,
             array; //starting numbers
 
-        if (Number(first) !== 0 && Number(second) !== 0 && Number(how_many) !== 0) {
+        if (Number(how_many) !== 0) { //allows 1st and 2nd number to be 0
             first = this.rd(first);
             second = this.rd(second);
             how_many = this.rd(how_many);
@@ -178,7 +178,7 @@ var math = {
             }
             result = array.join(", ");
         } else {
-            result = "INPUT ERROR: only accepts number and non-zero";
+            result = "INPUT ERROR: only accepts number and non-zero for 3rd number";
         }
         return result;
     },
