@@ -173,7 +173,7 @@ var math = {
             result,
             array; //starting numbers
 
-        if (!!Number(first) && !!Number(second) && Number(how_many) > 0) { //allows 1st and 2nd numbers to be 0, but not *how_many*
+        if (!isNaN(first) && !isNaN(second) && Number(how_many) > 0) { //allows 1st and 2nd numbers to be 0, but not *how_many*
             first = math.rd(first);
             second = math.rd(second);
             how_many = math.rd(how_many);
