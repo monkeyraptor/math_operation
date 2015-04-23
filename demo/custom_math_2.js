@@ -152,7 +152,7 @@ var math = {
         if (!isNaN(your_number)) {
             if (your_number < 0) { p = "-"; } else { p = ""; }
 
-            r = math.rd(math.ab(your_number)).toString();
+            r = math.ab(math.rd(your_number)).toString();
             f = r.split("").reverse();
 
             for (i; i <= math.rd(f.length / 4); i++) {
