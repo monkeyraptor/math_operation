@@ -125,7 +125,7 @@
                             expl.innerHTML = "Explanation";
                             clear(output_text);
                         } else {
-                            if (!!this.value.match(/\(\d,*\)/g)) { //capture (digit+,) pattern
+                            if (!!this.value.match(/\(((\d,*)\s*)*\)/g)) { //capture (digit+,) pattern
                                 run_btn.disabled = 0;
                             } else {
                                 run_btn.disabled = 1;
