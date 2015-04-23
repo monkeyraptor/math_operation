@@ -146,7 +146,7 @@ var math = {
         if (!isNaN(your_number)) {
             if (your_number < 0) { p = "-"; } else { p = ""; }
 
-            r = this.rd(this.ab(your_number)).toString();
+            r = this.ab(this.rd(your_number)).toString();
             f = r.split("").reverse();
 
             for (i; i <= this.rd(f.length / 4); i++) {
