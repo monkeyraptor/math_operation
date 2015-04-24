@@ -3,6 +3,8 @@
 
 This is not overriding built-in `Math()` method, just a custom *module* with different functions combined.
 
+The difference is on the demo's user interface handler. It won't work for input with `-` (dash).
+
 ## DEMO
 
 [`At CodePen`](http://codepen.io/monkeyraptor/full/YXzPvN/)
