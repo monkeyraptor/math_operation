@@ -112,6 +112,8 @@ Meanwhile, it consists of:
    > - `flag` 0 is for generating a particular line of Pascal's triangle sequence.
    > - `flag` 1 is for generating all lines of Pascal's triangle sequence until the given limit.
    
+   **PLEASE NOTE that this is using iteration, so, limit the input. I recommend around 20-ish. It will still work smoothly with that input range. Above that, the it'll "break" the browser.**
+   
    >Examples:
    >- `math.pascal_triangle(2, 0)` will generate output `1, 1` (string).
    >- `math.pascal_triangle(3, 1)` will generate output `1 | 1 1 | 1 2 1` (string).
