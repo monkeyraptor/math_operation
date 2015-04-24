@@ -25,11 +25,8 @@ math = {
             result = 1;
         
         if (!isNaN(n) && n > -1) {
-            n = misc_math.rd(n);
-            
-            if (n === 0 && n === 1) {
-                result = 1;
-            } else if (n > 1) {
+            n = misc_math.rd(n);            
+            if (n > 1) {
                 for (i; i <= n; i++) {
                     result *= i;
                 }
