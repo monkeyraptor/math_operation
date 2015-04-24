@@ -112,7 +112,7 @@ Meanwhile, it consists of:
    
    >Examples:
    >- `math.pascal_triangle(2, 0)` will generate output `1, 1` (string).
-   >- `math.generate_prime(3, 1)` will generate output `1 | 1 1 | 1 2 1` (string).
+   >- `math.pascal_triangle(3, 1)` will generate output `1 | 1 1 | 1 2 1` (string).
    
    > Credit for neat example `www.ywhmaths.webs.com/Arithmetic/Pascal.html`
 
@@ -140,6 +140,14 @@ Meanwhile, it consists of:
    >- `math.gcf(12, 15)` will generate output `3` (number).
    >- `math.lcm(51, 18, 42)` will generate output `3` (number).
 
+## String to array
+   If you need to get convert the `string` into `array` for your other additional functions, it can be done with:
+   
+   ```javascript
+   the_array = the_string_output.split(", ");
+   ```
+   This consistently uses `join(", ")` to convert the `array` into `string` output.
+   
 ##How to use it in HTML
 
 Grab the [`custom_math.js`](https://github.com/monkeyraptor/math_operation/blob/master/custom_math.js), you can compress it yourself (recommended [`tool`](http://gpbmike.github.io/refresh-sf/)).
