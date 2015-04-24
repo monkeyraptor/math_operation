@@ -499,7 +499,7 @@ misc_math = {
                 obj = splice_it(d, c, l_1, l_0);
             }                
         } else {
-            obj = { "difference": "ERROR ARRAY INPUT", "same_elements": "ERROR ARRAY INPUT" };
+            obj = { "difference": [], "same_elements": [] };
         }
         return obj;
     },
