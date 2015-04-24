@@ -2,7 +2,7 @@
     <head>
         <META CHARSET="UTF-8">
         <META NAME="VIEWPORT" CONTENT="WIDTH=DEVICE-WIDTH, INITIAL-SCALE=1.0">  
-        <LINK HREF="custom_math.css" REL="stylesheet">
+        <LINK HREF="custom_math.css" REL="STYLESHEET">
     </head>
 
     <body>
@@ -31,6 +31,8 @@
                     <li>Prime Check:<br><mark>math.prime_check(integer)</mark></li>
                     <li>Generating Primes:<br><mark>math.generate_prime(start, how_many)</mark></li>
                     <li>Pascal's Triangle:<br><mark>math.pascal_triangle(how_many, flag)</mark></li>
+                    <li>Least Common Multiple:<br><mark>math.lcm(num_1, num_2[, num_3])</mark></li>
+                    <li>Greatest Common Factor:<br><mark>math.gcf(num_1, num_2[, num_3])</mark></li>
                 </ol>
                 <hr>
                     Project at GitHub: <a class="green" title="new window" href="https://github.com/monkeyraptor/math_operation" target="_blank">github.com/monkeyraptor/math_operation</a>
@@ -101,7 +103,20 @@
 
                             "This needs two arguments<hr><mark>math.pascal_triangle(how_many, flag)</mark><hr><mark>flag</mark> <u>0</u> is for getting the particular number sequence line of Pascal's triangle and the <u>1</u> is to show all lines until the given limit<hr> Example:<br><br><mark>math.pascal_triangle(10, 0)</mark>", 
                             
-                            2]                                
+                            2],
+
+    //[10] math.lcm(how_many, flag)
+    "math.lcm": [math.lcm,
+
+                            "This needs two arguments minimum, max of three<hr><mark>math.lcm(num_1, num_2[, num_3])</mark><hr>Examples:<br><br><mark>math.lcm(10, 8)</mark><br><br><mark>math.lcm(15, 8, 14)</mark>", 
+                            
+                            "2 or 3"],
+    //[11] math.gcf(how_many, flag)
+    "math.gcf": [math.gcf,
+
+                            "This needs two arguments minimum, max of three<hr><mark>math.gcf(num_1, num_2[, num_3])</mark><hr>Examples:<br><br><mark>math.gcf(10, 28)</mark><br><br><mark>math.gcf(15, 8, 14)</mark>", 
+                            
+                            "2 or 3"]
                     },
                     run_btn = d.getElementById("run_btn"),
                     input_text = d.getElementById("input"),
@@ -152,6 +167,12 @@
                         } 
                     } else if (keyword[key][2] === 3) {
                         if (!!nums && nums.length === keyword[key][2]) {
+                            result = keyword[key][0](nums[0], nums[1], nums[2]);
+                        }
+                    } else if (keyword[key][2] === "2 or 3") {
+                        if (!!nums && nums.length === 2) {
+                            result = keyword[key][0](nums[0], nums[1]);
+                        } else if (!!nums && nums.length === 3) {
                             result = keyword[key][0](nums[0], nums[1], nums[2]);
                         }
                     }
