@@ -153,11 +153,9 @@ Then:
         <!--your head content-->
           
         <script>
-            //*custom_math.js* goes here. It can be in HTML or external.
-            //Make sure you don't have global JS variable named *math*.
-            //If you have that, then change the name of this library variable name.
-            //It's at the beginning of the script, var math = { ...
-            //You can change the keyword of it.
+            /* 
+            \  *custom_math.js* goes here. It can be in HTML or external (synchronous with [script] tag).
+            */
         </script>
       
     </head>
