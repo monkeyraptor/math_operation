@@ -141,7 +141,7 @@ Meanwhile, it consists of:
    >- `math.lcm(51, 18, 42)` will generate output `3` (number).
 
 ## String to array
-   If you need to get convert the `string` into `array` for your other additional functions, it can be done with:
+   If you need to get `array` from `string` output for your other additional functions, it can be done with:
    
    ```javascript
    the_array = the_string_output.split(", ");
