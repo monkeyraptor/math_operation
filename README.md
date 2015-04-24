@@ -9,7 +9,7 @@ This is not overriding built-in `Math()` method, just a custom *module* with dif
 
 ![UI snapshot](https://jpython27.appspot.com/custom_math_ui.png)
 
->The demo uses the [`custom_math_2.js`](https://github.com/monkeyraptor/math_operation/blob/master/demo/custom_math_2.js) (in `demo` folder). The difference is, that one doesn't have `this` keyword.
+>The demo uses the [`custom_math_2.js`](https://github.com/monkeyraptor/math_operation/blob/master/demo/custom_math_2.js) (in `demo` folder). ~~The difference is, that one doesn't have `this` keyword.~~ They are the same.
 
 I'll be adding more of them lator. Feel free to add more or fork or whatever.
 
@@ -116,6 +116,30 @@ Meanwhile, it consists of:
    
    > Credit for neat example `www.ywhmaths.webs.com/Arithmetic/Pascal.html`
 
+###10. **Least Common Multiple (LCM)**
+   
+   Usage: `math.lcm(num_1, num_2[, num_3])`
+  
+   >`num_3` is optional. It can calculate 2 or 3 arguments.
+  
+   > Each input must be natural number (N*) (non-zero positive integer)
+  
+   >Examples:
+   >- `math.lcm(12, 18)` will generate output `36` (number).
+   >- `math.lcm(15, 8, 42)` will generate output `840` (number).
+
+###11. **Greatest Common Factor (GCF)**
+   
+   Usage: `math.gcf(num_1, num_2[, num_3])`
+  
+   >`num_3` is also optional. It can calculate 2 or 3 arguments.
+   
+   > Each input must be natural number (N*) (non-zero positive integer)
+   
+   >Examples:
+   >- `math.gcf(12, 15)` will generate output `3` (number).
+   >- `math.lcm(51, 18, 42)` will generate output `3` (number).
+
 ##How to use it in HTML
 
 Grab the [`custom_math.js`](https://github.com/monkeyraptor/math_operation/blob/master/custom_math.js), you can compress it yourself (recommended [`tool`](http://gpbmike.github.io/refresh-sf/)).
@@ -124,38 +148,39 @@ Then:
 ```html
 <html>
 
-   <head>
+    <head>
    
-      <!--your head content-->
+        <!--your head content-->
+          
+        <script>
+            //*custom_math.js* goes here. It can be in HTML or external.
+            //Make sure you don't have global JS variable named *math*.
+            //If you have that, then change the name of this library variable name.
+            //It's at the beginning of the script, var math = { ...
+            //You can change the keyword of it.
+        </script>
       
-      <script>
-         //*custom_math.js* goes here. It can be in HTML or external.
-         //Make sure you don't have global JS variable named *math*.
-         //If you have that, then change the name of this library variable name.
-         //It's at the beginning of the script, var math = { ...
-         //You can change the keyword of it.
-      </script>
-      
-   </head>
+    </head>
    
-   <body>
+    <body>
    
-      <!--your body content-->
+        <!--your body content-->
      
-      <p>
-         So, blabla, something something, as such, we have the total ways of doing that, like:
-          <!--For instance, this is the element to be injected with *combination* result-->
-         <div id="something"></div>
-      </p>
-      <script>
-         //this is the element with id *something*
-         var your_element = document.getElementById("something");
+        <p>
+            So, blabla, something something, as such, we have the total ways of doing that, like:
+            <!--For instance, this is the element to be injected with *combination* result-->
+            <div id="something"></div>
+        </p>
+        
+        <script>
+            //this is the element with id *something*
+            var your_element = document.getElementById("something");
          
-         //invoking the *combination* function and injecting the result to that element:
-         your_element.innerHTML = "Combination(5, 2) = " + math.combination(5, 2);
-      </script>
+            //invoking the *combination* function and injecting the result to that element:
+            your_element.innerHTML = "Combination(5, 2) = " + math.combination(5, 2);
+        </script>
       
-   </body>
+    </body>
    
 </html>
 ```
@@ -164,6 +189,6 @@ Then:
 
 For loading the script from *external* storage (not placed in the HTML) and *asynchronous*, read these gists:
 
-1. [`Gist one`](https://gist.github.com/monkeyraptor/532517be33ead64e57f5): using `script` tag with `async` attribute and using timer to detect the *readiness* of the external script.
+1. ***Not recommended*** [`Gist one`](https://gist.github.com/monkeyraptor/532517be33ead64e57f5): using `script` tag with `async` attribute and using timer to detect the *readiness* of the external script.
 
 2. [`Gist two`](https://gist.github.com/monkeyraptor/339905bc5edc703b9f92): inject the `script` element via JS.
