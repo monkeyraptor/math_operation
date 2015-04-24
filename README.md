@@ -148,7 +148,7 @@ Meanwhile, it consists of:
    ```javascript
    the_array = the_string_output.split(", ");
    ```
-   This mostly uses `join(", ")` to convert the `array` into `string` output. Except the **fibonacci** with `flag` 1.
+   > This mostly uses `join(", ")` to convert the `array` into `string` output. Except the **pascal_triangle** and **factorof** with `flag` 1. You can customize the `join()` part in those.
    
 ##How to use it in HTML
 
