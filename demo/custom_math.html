@@ -39,118 +39,125 @@
             </div>
         </div>
         <script>
-            //the handler
             function my_math_handler() {
+                "use strict";
                 var d = document,
                     keyword = {
                     
-    //[1] math.factorial(n)
-    "math.factorial": [math.factorial,
+                        //[1] math.factorial(n)
+                        "math.factorial": [math.factorial,
 
-                      "This needs one argument<hr><mark>math.factorial(n)</mark><hr>Example:<br><br><mark>math.factorial(5)</mark>",
-                      
-                      1],
-                      
-    //[2] math.combination(n, k)
-    "math.combination": [math.combination, 
+                                "This needs one argument<hr><mark>math.factorial(n)</mark><hr>Example:<br><br><mark>math.factorial(5)</mark>",
+                                  
+                                1],
+                                  
+                        //[2] math.combination(n, k)
+                        "math.combination": [math.combination, 
 
-                        "This needs two arguments<hr><mark>math.combination(n, k)</mark><hr>Example:<br><br><mark>math.combination(7, 2)</mark>",
-                        
-                        2],
-                        
-    //[3] math.permutation(n, k)                      
-    "math.permutation": [math.permutation,
+                                "This needs two arguments<hr><mark>math.combination(n, k)</mark><hr>Example:<br><br><mark>math.combination(7, 2)</mark>",
+                                    
+                                2],
+                                    
+                        //[3] math.permutation(n, k)                      
+                        "math.permutation": [math.permutation,
 
-                        "This needs two arguments<hr><mark>math.permutation(n, k)</mark><hr>Example:<br><br><mark>math.permutation(10, 3)</mark>", 
-                        
-                        2],
-                        
-    //[4] math.addcomma(a)                      
-    "math.addcomma": [math.addcomma, 
+                                "This needs two arguments<hr><mark>math.permutation(n, k)</mark><hr>Example:<br><br><mark>math.permutation(10, 3)</mark>", 
+                                
+                                2],
+                                    
+                        //[4] math.addcomma(a)                      
+                        "math.addcomma": [math.addcomma, 
 
-                      "This needs one argument<hr><mark>math.addcomma(large_integer)</mark><hr>Example:<br><br><mark>math.addcomma(25000)</mark>",  
-                      
-                      1],
+                                "This needs one argument<hr><mark>math.addcomma(large_integer)</mark><hr>Example:<br><br><mark>math.addcomma(25000)</mark>",  
 
-    //[5] math.fibonacci(1st_number, 2nd_number, how_many)  
-    "math.fibonacci": [math.fibonacci, 
+                                1],
 
-                      "This needs three arguments<hr><mark>math.fibonacci(1st_number, 2nd_number, how_many)</mark><hr>Example:<br><br><mark>math.fibonacci(1, 1, 3)</mark>", 
-                      
-                      3],
-                      
-    //[6] math.factorof(positive_integer, flag)                  
-    "math.factorof": [math.factorof, 
-                      "This needs two arguments<hr><mark>math.factorof(positive_integer, flag)</mark><br><br><mark>flag</mark> can be 0 or 1<hr>Example:<br><br><mark>math.factorof(15, 1)</mark>", 
-                      2],
-                      
-    //[7] math.prime_check(positive_integer)
-    "math.prime_check": [math.prime_check, 
+                        //[5] math.fibonacci(1st_number, 2nd_number, how_many)  
+                        "math.fibonacci": [math.fibonacci, 
 
-                      "This needs one argument<hr><mark>math.prime_check(positive_integer)</mark><hr>Example:<br><br><mark>math.prime_check(20)</mark>", 
-                      
-                      1],      
-                      
-    //[8] math.generate_prime(start_num, how_many)
-    "math.generate_prime": [math.generate_prime,
+                                "This needs three arguments<hr><mark>math.fibonacci(1st_number, 2nd_number, how_many)</mark><hr>Example:<br><br><mark>math.fibonacci(1, 1, 3)</mark>", 
 
-                            "This needs two arguments<hr><mark>math.generate_prime(start_num, how_many)</mark><hr>Example:<br><br><mark>math.generate_prime(3, 7)</mark>", 
-                            
-                            2],
-                            
-    //[9] math.pascal_triangle(how_many, flag)
-    "math.pascal_triangle": [math.pascal_triangle,
+                                3],
+                                  
+                        //[6] math.factorof(positive_integer, flag)                  
+                        "math.factorof": [math.factorof, 
 
-                            "This needs two arguments<hr><mark>math.pascal_triangle(how_many, flag)</mark><hr><mark>flag</mark> <u>0</u> is for getting the particular number sequence line of Pascal's triangle and the <u>1</u> is to show all lines until the given limit<hr> Example:<br><br><mark>math.pascal_triangle(10, 0)</mark>", 
-                            
-                            2],
+                                "This needs two arguments<hr><mark>math.factorof(positive_integer, flag)</mark><br><br><mark>flag</mark> can be 0 or 1<hr>Example:<br><br><mark>math.factorof(15, 1)</mark>",
 
-    //[10] math.lcm(how_many, flag)
-    "math.lcm": [math.lcm,
+                                2],
+                                  
+                        //[7] math.prime_check(positive_integer)
+                        "math.prime_check": [math.prime_check, 
 
-                            "This needs two arguments minimum, max of three<hr><mark>math.lcm(num_1, num_2[, num_3])</mark><hr>Examples:<br><br><mark>math.lcm(10, 8)</mark><br><br><mark>math.lcm(15, 8, 14)</mark>", 
-                            
-                            "2 or 3"],
-    //[11] math.gcf(how_many, flag)
-    "math.gcf": [math.gcf,
+                                "This needs one argument<hr><mark>math.prime_check(positive_integer)</mark><hr>Example:<br><br><mark>math.prime_check(20)</mark>", 
 
-                            "This needs two arguments minimum, max of three<hr><mark>math.gcf(num_1, num_2[, num_3])</mark><hr>Examples:<br><br><mark>math.gcf(10, 28)</mark><br><br><mark>math.gcf(15, 8, 14)</mark>", 
-                            
-                            "2 or 3"]
+                                1],      
+                                  
+                        //[8] math.generate_prime(start_num, how_many)
+                        "math.generate_prime": [math.generate_prime,
+
+                                "This needs two arguments<hr><mark>math.generate_prime(start_num, how_many)</mark><hr>Example:<br><br><mark>math.generate_prime(3, 7)</mark>", 
+
+                                2],
+                                        
+                        //[9] math.pascal_triangle(how_many, flag)
+                        "math.pascal_triangle": [math.pascal_triangle,
+
+                                "This needs two arguments<hr><mark>math.pascal_triangle(how_many, flag)</mark><hr><mark>flag</mark> <u>0</u> is for getting the particular number sequence line of Pascal's triangle and the <u>1</u> is to show all lines until the given limit<hr> Example:<br><br><mark>math.pascal_triangle(10, 0)</mark>", 
+
+                                2],
+
+                        //[10] math.lcm(how_many, flag)
+                        "math.lcm": [math.lcm,
+
+                                "This needs two arguments minimum, max of three<hr><mark>math.lcm(num_1, num_2[, num_3])</mark><hr>Examples:<br><br><mark>math.lcm(10, 8)</mark><br><br><mark>math.lcm(15, 8, 14)</mark>", 
+
+                                "2 or 3"],
+
+                        //[11] math.gcf(how_many, flag)
+                        "math.gcf": [math.gcf,
+
+                                "This needs two arguments minimum, max of three<hr><mark>math.gcf(num_1, num_2[, num_3])</mark><hr>Examples:<br><br><mark>math.gcf(10, 28)</mark><br><br><mark>math.gcf(15, 8, 14)</mark>", 
+
+                                "2 or 3"]
                     },
                     run_btn = d.getElementById("run_btn"),
                     input_text = d.getElementById("input"),
                     output_text = d.getElementById("output"),
                     expl = d.getElementById("explanation"),
+                    keys = Object.keys(keyword),
                     i,
                     val,
                     key;
+
+                input_text.disabled = 0;
+                output_text.disabled = 0;
+
+                function clear(a) {
+                    a.value = "";
+                }
                 
-                input_text.disabled = output_text.disabled = 0;
-                
-                function clear(a) { a.value = ""; }
-                
-                input_text.oninput = function () {                    
-                    for (i in keyword) {
-                        if (keyword.hasOwnProperty(i)) {
-                            if (!this.value.match(i)) {
-                                run_btn.disabled = 1;
-                                val = "";
-                                key = "";
-                                expl.innerHTML = "Explanation";
-                                clear(output_text);
+                input_text.oninput = function () {
+                    i = 0;
+                    while (i < keys.length) {
+                        if (!input_text.value.match(keys[i])) {                        
+                            run_btn.disabled = 1;
+                            val = "";
+                            key = "";
+                            expl.innerHTML = "Explanation";
+                            clear(output_text);
+                        } else {
+                            if (!!input_text.value.match(/[^\s+]\(((\d,*)\s*)*\)$/g)) {
+                                run_btn.disabled = 0;
                             } else {
-                                if (!!this.value.match(/[^\s+]\(((\d,*)\s*)*\)$/g)) { //capture (digit+,) pattern
-                                    run_btn.disabled = 0;
-                                } else {
-                                    run_btn.disabled = 1;
-                                }
-                                val = this.value;
-                                key = i;
-                                expl.innerHTML = keyword[key][1];  
-                                break;           
+                                run_btn.disabled = 1;
                             }
-                        }
+                            val = input_text.value;
+                            key = keys[i];
+                            expl.innerHTML = keyword[keys[i]][1];  
+                            break;           
+                        }                        
+                        i += 1;
                     }
                 };
                 
@@ -180,7 +187,7 @@
                     output_text.value = result;
                 };
             }
-            
+
             //inject the external script
             (function (d, s, h) {
                 "use strict";
@@ -188,15 +195,14 @@
                     custom_math = d.createElement(s),
                     flag = 0,
                     head = d.getElementsByTagName(h)[0];
-                custom_math.src = url;
+                
+                custom_math.src = url;                
                 head.appendChild(custom_math);
-                custom_math.onload = custom_math.onreadystatechange = function () {
-                    if (!flag || !!this.readyState && this.readyState !== "complete") {
-                        //go to your math handler
-                        my_math_handler();
-                        flag = 1;
-                    }          
-                };
+                if (!flag || (!!custom_math.readyState && custom_math.readyState !== "complete")) {
+                    custom_math.onload = my_math_handler;
+                    custom_math.onreadystatechange = my_math_handler;
+                    flag = 1;
+                }
             }(document, "script", "head"));
         </script>
     </body>
