@@ -133,22 +133,24 @@
                 
                 input_text.oninput = function () {                    
                     for (i in keyword) {
-                        if (!this.value.match(i)) {
-                            run_btn.disabled = 1;
-                            val = "";
-                            key = "";
-                            expl.innerHTML = "Explanation";
-                            clear(output_text);
-                        } else {
-                            if (!!this.value.match(/\(((\d,*)\s*)*\)/g)) { //capture (digit+,) pattern
-                                run_btn.disabled = 0;
-                            } else {
+                        if (keyword.hasOwnProperty(i)) {
+                            if (!this.value.match(i)) {
                                 run_btn.disabled = 1;
+                                val = "";
+                                key = "";
+                                expl.innerHTML = "Explanation";
+                                clear(output_text);
+                            } else {
+                                if (!!this.value.match(/\(((\d,*)\s*)*\)/g)) { //capture (digit+,) pattern
+                                    run_btn.disabled = 0;
+                                } else {
+                                    run_btn.disabled = 1;
+                                }
+                                val = this.value;
+                                key = i;
+                                expl.innerHTML = keyword[key][1];  
+                                break;           
                             }
-                            val = this.value;
-                            key = i;
-                            expl.innerHTML = keyword[key][1];  
-                            break;           
                         }
                     }
                 };
