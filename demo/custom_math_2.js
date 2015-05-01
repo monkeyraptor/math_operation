@@ -501,13 +501,13 @@ misc_math = {
         return obj;
     },
 
-    //checking above 21 digit length or infinity
+    //checking equal or above 21 digit length or infinity
     check: function (a) {
         "use strict";
         var result = 0;
         if (!!a.toString().match(/error/gi)) {
             result = -1;
-        } else if (a.toString().length > 21 || !isFinite(a)) {
+        } else if (a.toString().length >= 21 || !isFinite(a)) {
             result = 1;
         }        
         return result;
