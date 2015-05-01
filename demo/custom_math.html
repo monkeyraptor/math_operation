@@ -198,11 +198,14 @@
                 
                 custom_math.src = url;                
                 head.appendChild(custom_math);
-                if (!flag || (!!custom_math.readyState && custom_math.readyState !== "complete")) {
-                    custom_math.onload = my_math_handler;
-                    custom_math.onreadystatechange = my_math_handler;
-                    flag = 1;
+                function callback() {
+                    if (!flag || (!!custom_math.readyState && custom_math.readyState !== "complete")) {
+                        my_math_handler();
+                        flag = 1;
+                    }
                 }
+                custom_math.onload = callback;
+                custom_math.onreadystatechange = callback;
             }(document, "script", "head"));
         </script>
     </body>
