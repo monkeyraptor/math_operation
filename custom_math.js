@@ -23,9 +23,9 @@ math = {
         "use strict";
         var i = 1,
             result = 1;
-        
+
         if (!isNaN(n) && n > -1) {
-            n = misc_math.rd(n);            
+            n = misc_math.rd(n);
             if (n > 1) {
                 for (i; i <= n; i++) {
                     result *= i;
@@ -183,7 +183,7 @@ math = {
                     array.push(i);
                 }
             }
-            
+
             if (Number(b) === 1) { //flag for displaying multiplication of the factors
                 a_l = array.length;
 
@@ -222,7 +222,7 @@ math = {
             }
             if (!!array[1] && !!array[1].toString().match(/such/gi)) {
                 result = array.join(" ");
-            }  else {
+            } else {
                 result = array.join(", ");
             }
         } else {
@@ -289,7 +289,7 @@ math = {
 
         return result;
     },
-    
+
     /*****************************************/
     //[9] Generate Pascal's triangle sequence (one particular line or many lines)
     pascal_triangle: function (a, b) {
@@ -298,23 +298,23 @@ math = {
             i = 0,
             j,
             k = 0,
-            result = {}, 
+            result = {},
             store = [];
-            
+
         //SPLENDID arithmetic method from http://www.ywhmaths.webs.com/Arithmetic/Pascal.html
         function pt(n, r) { //pt as in *Pascal's Triangle*
             var buffer;
             if (n > 1 && r > 0 && r < n) {
                 buffer = pt(n - 1, r - 1) + pt(n - 1, r);
-            } else {  
+            } else {
                 buffer = 1;
             }
-            return buffer;                
+            return buffer;
         }
-        
+
         if (Number(a) > 0) {
             a = misc_math.rd(a); //round down
-            
+
             for (i; i < a; i++) {
                 j = 0;
                 array = []; //empty the *array* buffer
@@ -322,22 +322,21 @@ math = {
                     array.push(pt(i, j)); //fill it again
                 }
                 result[i] = array; //fill the *result* object with the *array*
-            }    
-            
-            if (Number(b) === 0) { //only a particular line                
+            }
+            if (Number(b) === 0) { //only a particular line
                 result = result[a - 1].join(", "); //array to string
-                
-            } else if (Number(b) === 1) { //show all lines until the limit number given                
+
+            } else if (Number(b) === 1) { //show all lines until the limit number given
                 for (k; k < a; k++) {
                     store.push(result[k].join(" ")); //this can be changed to fit your layout.
                 }
-                
+
                 result = store.join(" | "); //this can be changed to fit your layout.
-                
-            } else {                
-                result = "INPUT ERROR: 0 or 1 for flag";                
-            }            
-        } else {            
+
+            } else {
+                result = "INPUT ERROR: 0 or 1 for flag";
+            }
+        } else {
             result = "INPUT ERROR: must be natural number (N*)";
         }
 
@@ -353,9 +352,9 @@ math = {
             t,
             u,
             z = [];
-        
+
         if (isNaN(c)) { //only 2 inputs provided
-            if (a > 0 && b > 0) {                
+            if (a > 0 && b > 0) {
                 a = misc_math.rd(a);
                 b = misc_math.rd(b);
 
@@ -365,10 +364,10 @@ math = {
                 if (t === 0) {
                     result = z[0];
 
-                } else {                   
+                } else {
                     gcf = math.gcf(z[0], z[1]); //GCF
                     result = z[0] * z[1] / gcf;
-                }                
+                }
             } else {
                 result = "INPUT ERROR: min 2 inputs and natural number (N*)";
             }
@@ -382,20 +381,20 @@ math = {
 
                 if (z[0] % z[2] === 0) {
                     result = math.lcm(z[0], z[1], undefined);
-                    
+
                 } else if (z[0] % z[1] === 0) {
                     result = math.lcm(z[0], z[2], undefined);
-                    
+
                 } else {
-                    t = math.lcm(z[0], z[1], undefined);                    
+                    t = math.lcm(z[0], z[1], undefined);
                     u = math.lcm(t, z[2], undefined);
-                    result = math.lcm(t, u, undefined);                    
+                    result = math.lcm(t, u, undefined);
                 }
             } else {
                 result = "INPUT ERROR: inputs must be natural number (N*)";
             }
         }
-        
+
         return result; //number
     },
 
@@ -407,39 +406,39 @@ math = {
             num_2,
             num_3,
             result;
-        
+
         if (isNaN(c)) { //3rd input undefined
             if (a > 0 && b > 0) {
                 a = misc_math.rd(a);
                 b = misc_math.rd(b);
-                
+
                 //get factors - convert string to array
                 num_1 = math.factorof(a, 0).split(", ");
                 num_2 = math.factorof(b, 0).split(", ");
-                
+
                 //put result
                 result = misc_math.c_a(num_1, num_2).same_elements
-                            .sort(misc_math.sorthl)[0];                
+                            .sort(misc_math.sorthl)[0];
             } else {
-                result = "INPUT ERROR: min 2 inputs and natural number (N*)";        
-            }            
+                result = "INPUT ERROR: min 2 inputs and natural number (N*)";
+            }
         } else if (Number(c) > 0) { //3rd input is provided
             a = misc_math.rd(a);
             b = misc_math.rd(b);
             c = misc_math.rd(c);
-            
+
             //get factors - convert string to array
             num_1 = math.factorof(a, 0).split(", ");
             num_2 = math.factorof(b, 0).split(", ");
             num_3 = math.factorof(c, 0).split(", ");
-            
+
             //put result
             result = misc_math.c_a(misc_math.c_a(num_1, num_2).same_elements, num_3)
-                        .same_elements.sort(misc_math.sorthl)[0];                
+                    .same_elements.sort(misc_math.sorthl)[0];
         } else {
-            result= "INPUT ERROR: inputs must be natural number (N*)";
+            result = "INPUT ERROR: inputs must be natural number (N*)";
         }
-        
+
         return result; //number
     }
 };
@@ -448,55 +447,58 @@ math = {
 // "misc_math" variable definitions
 misc_math = {
     //compare two arrays
-    c_a: function(a, b) { //https://github.com/monkeyraptor/compare_2_arrays
+    c_a: function (a, b) { //https://github.com/monkeyraptor/compare_2_arrays
         "use strict";
         var c,
             d,
             l_0,
             l_1,
             obj = {};
-            function trim(a) {
-                var i = 0,
-                    l = a.length,
-                    buffer = [];
-                for (i; i < l; i++) {
-                    if (!a[i].toString().match("(deleted)")) {
-                        buffer.push(a[i]);
+        function trim(a) {
+            var i = 0,
+                l = a.length,
+                buffer = [];
+            for (i; i < l; i++) {
+                if (!a[i].toString().match("(deleted)")) {
+                    buffer.push(a[i]);
+                }
+            }
+            return buffer;
+        }
+        function splice_it(k, l, m, n) {
+            var i = 0,
+                j,
+                buffer = [];
+            for (i; i < m; i++) {
+                j = 0;
+                for (j; j < n; j++) {
+                    if (l[j] === k[i]) {
+                        buffer.push(l[j]);
+                        l.splice(j, 1, l[j] + " (deleted)");
+                        k.splice(i, 1, l[i] + " (deleted)");
                     }
                 }
-                return buffer;
             }
-            function splice_it(k, l, m, n) {
-                var i = 0,
-                    j,
-                    buffer = [];
-                for (i; i < m; i++) {
-                    j = 0;
-                    for (j; j < n; j++) {
-                        if (l[j] === k[i]) {
-                            buffer.push(l[j]);
-                            l.splice(j, 1, l[j] + " (deleted)");
-                            k.splice(i, 1, l[i] + " (deleted)");
-                        }
-                    }
-                }                
-                return {
-                            "difference": trim(k).concat(trim(l)), 
-                            "same_elements": buffer
-                        };
-            }            
-        if (typeof(a) === "object" && typeof(b) === "object") {
+            return {
+                "difference": trim(k).concat(trim(l)),
+                "same_elements": buffer
+            };
+        }
+        if (typeof a === "object" && typeof b === "object") {
             c = a.slice();
             d = b.slice();
             l_0 = c.length;
-            l_1 = d.length;            
+            l_1 = d.length;
             if (c.length >= d.length) {
                 obj = splice_it(c, d, l_0, l_1);
             } else {
                 obj = splice_it(d, c, l_1, l_0);
-            }                
+            }
         } else {
-            obj = { "difference": [], "same_elements": [] };
+            obj = {
+                "difference": [],
+                "same_elements": []
+            };
         }
         return obj;
     },
@@ -505,11 +507,9 @@ misc_math = {
     check: function (a) {
         "use strict";
         var result = 0;
-        if (!!a.toString().match(/error/gi)) {
-            result = -1;
-        } else if (a.toString().length >= 21 || !isFinite(a)) {
+        if (a.toString().length >= 21 || !isFinite(a)) {
             result = 1;
-        }        
+        }
         return result;
     },
 
@@ -533,11 +533,13 @@ misc_math = {
 
     //HIGH to low (numeral) sorter
     sorthl: function (a, b) {
+        "use strict";
         return parseInt(b, 10) - parseInt(a, 10);
     },
-    
+
     //LOW to high (numeral) sorter
     sortlh: function (a, b) {
+        "use strict";
         return parseInt(a, 10) - parseInt(b, 10);
     }
 };
