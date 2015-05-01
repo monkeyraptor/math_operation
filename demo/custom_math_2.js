@@ -371,7 +371,7 @@ math = {
             result,
             t,
             u,
-            v,
+            v = [],
             z = [];
 
         if (isNaN(c)) { //only 2 inputs provided
