@@ -27,8 +27,9 @@ math = {
         if (!isNaN(n) && n > -1) {
             n = misc_math.rd(n);
             if (n > 1) {
-                for (i; i <= n; i++) {
+                while (i <= n) {                    
                     result *= i;
+                    i += 1;
                 }
             }
         } else {
@@ -61,11 +62,13 @@ math = {
             } else {
                 start = n - k + 1;
 
-                for (i; i <= k; i++) {
+                while (i <= k) {
                     denumerator *= i;
+                    i += 1;
                 }
-                for (start; start <= n; start++) {
+                while (start <= n) {
                     numerator *= start;
+                    start += 1;
                 }
                 result = numerator / denumerator;
             }
@@ -97,8 +100,9 @@ math = {
                 result = n;
             } else {
                 start = n - k + 1;
-                for (start; start <= n; start++) {
+                while (start <= n) {
                     numerator *= start;
+                    start += 1;
                 }
                 result = numerator;
             }
@@ -121,13 +125,18 @@ math = {
             i = 1;
 
         if (!isNaN(your_number)) {
-            if (your_number < 0) { p = "-"; } else { p = ""; }
+            if (your_number < 0) {
+                p = "-";
+            } else {
+                p = "";
+            }
 
             r = misc_math.ab(misc_math.rd(your_number)).toString();
             f = r.split("").reverse();
 
-            for (i; i <= misc_math.rd(f.length / 4); i++) {
+            while (i <= misc_math.rd(f.length / 4)) {
                 f.splice((4 * i - 1), 0, ",");
+                i += 1;
             }
             your_number = p + f.reverse().join("");
         } else {
@@ -150,8 +159,9 @@ math = {
             how_many = misc_math.rd(how_many);
             array = [first, second];
 
-            for (i = 2; i <= how_many + 1; i++) {
+            while (i <= how_many + 1) {
                 array.push(array[i - 1] + array[i - 2]);
+                i += 1;
             }
             result = array.join(", ");
         } else {
@@ -178,10 +188,11 @@ math = {
             if (a < 0) { //convert it to positive integer and round down
                 a = misc_math.ab(misc_math.rd(a));
             }
-            for (i; i <= a; i++) {
+            while (i <= a) {
                 if (a % i === 0) {
                     array.push(i);
                 }
+                i += 1;
             }
 
             if (Number(b) === 1) { //flag for displaying multiplication of the factors
@@ -190,31 +201,35 @@ math = {
                 if (a_l % 2 === 0) { //if the array length is even
                     divider = a_l / 2;
 
-                    for (j; j < divider; j++) {
+                    while (j < divider) {
                         left.push(array[j]);
                         right.push(array[j + divider]);
+                        j += 1;
                     }
 
                     right.reverse();
                     array = [];
 
-                    for (k; k < left.length; k++) {
+                    while (k < left.length) {
                         array.push(left[k] + " * " + right[k]);
+                        k += 1;
                     }
                 } else { //for odd array length
                     divider = misc_math.rd(a_l / 2);
 
-                    for (j; j < divider; j++) {
+                    while (j < divider) {
                         left.push(array[j]);
                         right.push(array[j + divider + 1]);
+                        j += 1;
                     }
 
                     left.push(array[divider]);
                     right.reverse().push(left[left.length - 1]);
                     array = [];
 
-                    for (k; k < left.length; k++) {
+                    while (k < left.length) {
                         array.push(left[k] + " * " + right[k]);
+                        k += 1;
                     }
                 }
             } else if (Number(b) !== 0 && Number(b) !== 1) {
@@ -246,11 +261,12 @@ math = {
                 limit = misc_math.rd(misc_math.sqr(a));
                 result = "PRIME number";
 
-                for (i; i <= limit; i++) {
+                while (i <= limit) {
                     if (a % i === 0) {
                         result = "Not a prime number";
                         break;
                     }
+                    i += 1;
                 }
 
             } else {
@@ -275,11 +291,12 @@ math = {
             start = misc_math.rd(start);
             how_many = misc_math.rd(how_many);
 
-            for (start; how_many > 0; start++) {
+            while (how_many > 0) {
                 if (!math.prime_check(start).match(/not/gi)) {
                     primes.push(start);
-                    how_many--;
+                    how_many -= 1;
                 }
+                start += 1;
             }
 
             result = primes.join(", ");
@@ -315,20 +332,23 @@ math = {
         if (Number(a) > 0) {
             a = misc_math.rd(a); //round down
 
-            for (i; i < a; i++) {
+            while (i < a) {
                 j = 0;
                 array = []; //empty the *array* buffer
-                for (j; j <= i; j++) {
+                while (j <= i) {
                     array.push(pt(i, j)); //fill it again
+                    j += 1;
                 }
                 result[i] = array; //fill the *result* object with the *array*
+                i += 1;
             }
             if (Number(b) === 0) { //only a particular line
                 result = result[a - 1].join(", "); //array to string
 
             } else if (Number(b) === 1) { //show all lines until the limit number given
-                for (k; k < a; k++) {
+                while (k < a) {
                     store.push(result[k].join(" ")); //this can be changed to fit your layout.
+                    k += 1;
                 }
 
                 result = store.join(" | "); //this can be changed to fit your layout.
@@ -351,14 +371,15 @@ math = {
             result,
             t,
             u,
+            v = [],
             z = [];
 
         if (isNaN(c)) { //only 2 inputs provided
             if (a > 0 && b > 0) {
                 a = misc_math.rd(a);
                 b = misc_math.rd(b);
-
-                z = [a, b].sort(misc_math.sorthl);
+                v = [a, b];
+                z = v.sort(misc_math.sorthl);
                 t = z[0] % z[1];
 
                 if (t === 0) {
@@ -377,7 +398,8 @@ math = {
                 a = misc_math.rd(a);
                 b = misc_math.rd(b);
                 c = misc_math.rd(c);
-                z = [a, b, c].sort(misc_math.sorthl);
+                v = [a, b, c];
+                z = v.sort(misc_math.sorthl);
 
                 if (z[0] % z[2] === 0) {
                     result = math.lcm(z[0], z[1], undefined);
@@ -418,7 +440,7 @@ math = {
 
                 //put result
                 result = misc_math.c_a(num_1, num_2).same_elements
-                            .sort(misc_math.sorthl)[0];
+                        .sort(misc_math.sorthl)[0];
             } else {
                 result = "INPUT ERROR: min 2 inputs and natural number (N*)";
             }
@@ -458,10 +480,11 @@ misc_math = {
             var i = 0,
                 l = a.length,
                 buffer = [];
-            for (i; i < l; i++) {
+            while (i < l) {
                 if (!a[i].toString().match("(deleted)")) {
                     buffer.push(a[i]);
                 }
+                i += 1;
             }
             return buffer;
         }
@@ -469,15 +492,17 @@ misc_math = {
             var i = 0,
                 j,
                 buffer = [];
-            for (i; i < m; i++) {
+            while (i < m) {
                 j = 0;
-                for (j; j < n; j++) {
+                while (j < n) {
                     if (l[j] === k[i]) {
                         buffer.push(l[j]);
                         l.splice(j, 1, l[j] + " (deleted)");
                         k.splice(i, 1, l[i] + " (deleted)");
                     }
+                    j += 1;
                 }
+                i += 1;
             }
             return {
                 "difference": trim(k).concat(trim(l)),
