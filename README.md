@@ -9,9 +9,11 @@ This is not overriding built-in `Math()` method, just a custom *module* with dif
 
 ![UI snapshot](https://jpython27.appspot.com/custom_math_ui.png)
 
->The demo uses the [`custom_math_2.js`](https://github.com/monkeyraptor/math_operation/blob/master/demo/custom_math_2.js) (in `demo` folder). ~~The difference is, that one doesn't have `this` keyword.~~ They are the same.
+>The demo uses the [`custom_math_2.js`](https://github.com/monkeyraptor/math_operation/blob/master/demo/custom_math_2.js) (in `demo` folder).
 
-The difference is on the demo's user interface handler. It won't work for input with `-` (dash).
+The differences are:
+- The demo's user interface handler: It won't work for input with `-` (dash).
+- The demo is using all `while` for the looping (testing purpose). The original one (`custom_math_2.js`) is all using `for`.
 
 I'll be adding more of them lator. Feel free to add more or fork or whatever.
 
