@@ -13,7 +13,7 @@ This is not overriding built-in `Math()` method, just a custom *module* with dif
 
 The differences are:
 - The demo's user interface handler: It won't work for input with `-` (dash).
-- The demo is using all `while` for the looping (testing purpose). The original one (`custom_math.js`) is all using `for`.
+- The demo is using all `while` for the looping (testing purpose). The original one ([`custom_math.js`](https://github.com/monkeyraptor/math_operation/blob/master/custom_math.js)) is all using `for`.
 
 I'll be adding more of them lator. Feel free to add more or fork or whatever.
 
