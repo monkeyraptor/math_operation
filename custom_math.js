@@ -27,9 +27,8 @@ math = {
         if (!isNaN(n) && n > -1) {
             n = misc_math.rd(n);
             if (n > 1) {
-                while (i <= n) {                    
-                    result *= i;
-                    i += 1;
+                for (i; i <= n; i += 1) {                    
+                    result *= i;                    
                 }
             }
         } else {
@@ -62,13 +61,11 @@ math = {
             } else {
                 start = n - k + 1;
 
-                while (i <= k) {
+                for (i; i <= k; i += 1) {
                     denumerator *= i;
-                    i += 1;
                 }
-                while (start <= n) {
+                for (start; start <= n; start += 1) {
                     numerator *= start;
-                    start += 1;
                 }
                 result = numerator / denumerator;
             }
@@ -100,9 +97,8 @@ math = {
                 result = n;
             } else {
                 start = n - k + 1;
-                while (start <= n) {
+                for (start; start <= n; start += 1) {
                     numerator *= start;
-                    start += 1;
                 }
                 result = numerator;
             }
@@ -134,9 +130,8 @@ math = {
             r = misc_math.ab(misc_math.rd(your_number)).toString();
             f = r.split("").reverse();
 
-            while (i <= misc_math.rd(f.length / 4)) {
+            for (i; i <= misc_math.rd(f.length / 4); i += 1) {
                 f.splice((4 * i - 1), 0, ",");
-                i += 1;
             }
             your_number = p + f.reverse().join("");
         } else {
@@ -159,9 +154,8 @@ math = {
             how_many = misc_math.rd(how_many);
             array = [first, second];
 
-            while (i <= how_many + 1) {
-                array.push(array[i - 1] + array[i - 2]);
-                i += 1;
+            for (i; i <= how_many + 1; i += 1) {
+                array.push(array[i - 1] + array[i - 2]);                
             }
             result = array.join(", ");
         } else {
@@ -188,11 +182,10 @@ math = {
             if (a < 0) { //convert it to positive integer and round down
                 a = misc_math.ab(misc_math.rd(a));
             }
-            while (i <= a) {
+            for (i; i <= a; i+= 1) {
                 if (a % i === 0) {
                     array.push(i);
                 }
-                i += 1;
             }
 
             if (Number(b) === 1) { //flag for displaying multiplication of the factors
@@ -201,35 +194,31 @@ math = {
                 if (a_l % 2 === 0) { //if the array length is even
                     divider = a_l / 2;
 
-                    while (j < divider) {
+                    for (j; j < divider; j += 1) {
                         left.push(array[j]);
                         right.push(array[j + divider]);
-                        j += 1;
                     }
 
                     right.reverse();
                     array = [];
 
-                    while (k < left.length) {
-                        array.push(left[k] + " * " + right[k]);
-                        k += 1;
+                    for (k; k < left.length; k += 1) {
+                        array.push(left[k] + " * " + right[k]);                        
                     }
                 } else { //for odd array length
                     divider = misc_math.rd(a_l / 2);
 
-                    while (j < divider) {
+                    for (j; j < divider; j += 1) {
                         left.push(array[j]);
-                        right.push(array[j + divider + 1]);
-                        j += 1;
+                        right.push(array[j + divider + 1]);                        
                     }
 
                     left.push(array[divider]);
                     right.reverse().push(left[left.length - 1]);
                     array = [];
 
-                    while (k < left.length) {
-                        array.push(left[k] + " * " + right[k]);
-                        k += 1;
+                    for (k; k < left.length; k += 1) {
+                        array.push(left[k] + " * " + right[k]);                        
                     }
                 }
             } else if (Number(b) !== 0 && Number(b) !== 1) {
@@ -261,12 +250,11 @@ math = {
                 limit = misc_math.rd(misc_math.sqr(a));
                 result = "PRIME number";
 
-                while (i <= limit) {
+                for (i; i <= limit; i += 1) {
                     if (a % i === 0) {
                         result = "Not a prime number";
                         break;
                     }
-                    i += 1;
                 }
 
             } else {
@@ -291,12 +279,11 @@ math = {
             start = misc_math.rd(start);
             how_many = misc_math.rd(how_many);
 
-            while (how_many > 0) {
+            for (start; how_many > 0; start += 1) {
                 if (!math.prime_check(start).match(/not/gi)) {
                     primes.push(start);
                     how_many -= 1;
                 }
-                start += 1;
             }
 
             result = primes.join(", ");
@@ -332,23 +319,20 @@ math = {
         if (Number(a) > 0) {
             a = misc_math.rd(a); //round down
 
-            while (i < a) {
+            for (i; i < a; i += 1) {
                 j = 0;
                 array = []; //empty the *array* buffer
-                while (j <= i) {
-                    array.push(pt(i, j)); //fill it again
-                    j += 1;
+                for (j; j <= i; j += 1) {
+                    array.push(pt(i, j)); //fill it again                    
                 }
-                result[i] = array; //fill the *result* object with the *array*
-                i += 1;
+                result[i] = array; //fill the *result* object with the *array*                
             }
             if (Number(b) === 0) { //only a particular line
                 result = result[a - 1].join(", "); //array to string
 
             } else if (Number(b) === 1) { //show all lines until the limit number given
-                while (k < a) {
+                for (k; k < a; k += 1) {
                     store.push(result[k].join(" ")); //this can be changed to fit your layout.
-                    k += 1;
                 }
 
                 result = store.join(" | "); //this can be changed to fit your layout.
@@ -480,11 +464,10 @@ misc_math = {
             var i = 0,
                 l = a.length,
                 buffer = [];
-            while (i < l) {
+            for (i; i < l; i += 1) {
                 if (!a[i].toString().match("(deleted)")) {
                     buffer.push(a[i]);
                 }
-                i += 1;
             }
             return buffer;
         }
@@ -492,17 +475,15 @@ misc_math = {
             var i = 0,
                 j,
                 buffer = [];
-            while (i < m) {
+            for (i; i < m; i += 1) {
                 j = 0;
-                while (j < n) {
+                for (j; j < n; j += 1) {
                     if (l[j] === k[i]) {
                         buffer.push(l[j]);
                         l.splice(j, 1, l[j] + " (deleted)");
                         k.splice(i, 1, l[i] + " (deleted)");
-                    }
-                    j += 1;
-                }
-                i += 1;
+                    }                    
+                }                
             }
             return {
                 "difference": trim(k).concat(trim(l)),
