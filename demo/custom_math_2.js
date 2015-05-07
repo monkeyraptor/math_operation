@@ -532,7 +532,7 @@ misc_math = {
     check: function (a) {
         "use strict";
         var result = 0;
-        if (a.toString().length >= 21 || !isFinite(a)) {
+        if (a.toString().length >= 21 || !isFinite(a) || a.toString().match(/./g)) {
             result = 1;
         }
         return result;
