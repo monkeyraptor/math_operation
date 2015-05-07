@@ -70,7 +70,7 @@ math = {
                     numerator *= start;
                     start += 1;
                 }
-                result = numerator / denumerator;
+                result = misc_math.rd(numerator / denumerator);
             }
         } else {
             result = "INPUT ERROR: n >= k, n >= 0, k >= 0";
