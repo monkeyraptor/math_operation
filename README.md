@@ -11,7 +11,7 @@ This is not overriding built-in `Math()` method, just a custom *module* with dif
 
 >The demo uses the [`custom_math_2.js`](https://github.com/monkeyraptor/math_operation/blob/master/demo/custom_math_2.js) (in `demo` folder).
 
-The differences ~~are~~ is:
+The difference~~s are~~ is:
 - ~~The demo's user interface handler: It won't work for input with `-` (dash)~~ Update: it's now available for negative number input. So this is not categorized as difference. Uh huh.
 - The demo is using all `while` for the looping (testing purpose). The original one ([`custom_math.js`](https://github.com/monkeyraptor/math_operation/blob/master/custom_math.js)) is all using `for`.
 
