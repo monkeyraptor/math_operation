@@ -139,7 +139,7 @@
                 
                 input_text.oninput = function () {
                     i = 0;
-                    while (i < keys.length) {
+                    do {
                         if (!input_text.value.match(keys[i])) {                        
                             run_btn.disabled = 1;
                             val = "";
@@ -158,7 +158,7 @@
                             break;           
                         }                        
                         i += 1;
-                    }
+                    } while (i < keys.length);
                 };
                 
                 run_btn.onclick = function () {
