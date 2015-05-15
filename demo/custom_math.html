@@ -161,7 +161,7 @@
                 };
                 
                 run_btn.onclick = function () {
-                    var nums = val.match(/-\d+|\d+/g),
+                    var nums = val.match(/[-]\d+/g),
                         result = "ERROR INPUT";
                         
                     if (keyword[key][2] === 1) {
