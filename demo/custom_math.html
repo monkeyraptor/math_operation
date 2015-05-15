@@ -147,7 +147,7 @@
                             expl.innerHTML = "Explanation";
                             clear(output_text);
                         } else {
-                            if (!!input_text.value.match(/[^\s+]\((-?(\d,*)\s*)*\)$/g)) {
+                            if (!!input_text.value.match(/\((-?(\d,*)\s?)*\)$/g)) {
                                 run_btn.disabled = 0;
                             } else {
                                 run_btn.disabled = 1;
