@@ -39,10 +39,9 @@
             </div>
         </div>
         <script>
-            function my_math_handler() {
+            function my_math_handler(d) {
                 "use strict";
-                var d = document,
-                    keyword = {
+                var keyword = {
                     
                         //[1] math.factorial(n)
                         "math.factorial": [math.factorial,
@@ -200,7 +199,7 @@
                 head.appendChild(custom_math);
                 function callback() {
                     if (!flag || (!!custom_math.readyState && custom_math.readyState !== "complete")) {
-                        my_math_handler();
+                        my_math_handler(d);
                         flag = 1;
                     }
                 }
