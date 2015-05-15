@@ -14,6 +14,8 @@ This is not overriding built-in `Math()` method, just a custom *module* with dif
 The difference~~s are~~ is:
 - ~~The demo's user interface handler: It won't work for input with `-` (dash)~~ Update: it's now available for negative number input. So this is not categorized as difference. Uh huh.
 - The demo is using ~~all~~ `while` (the script on the HTML is using `do-while`) for the looping (testing purpose). The original one ([`custom_math.js`](https://github.com/monkeyraptor/math_operation/blob/master/custom_math.js)) is all using `for`.
+ 
+> For transforming `do-while` (with `break`) to `forEach`, I typed a gist [`right there`](https://gist.github.com/monkeyraptor/6e5579920b6ccf8153ed). By default, there's no `break`-ing in `forEach`, thus we need to tinker the script flow so it fits the loop block.
 
 I'll be adding more of them lator. Feel free to add more or fork or whatever.
 
