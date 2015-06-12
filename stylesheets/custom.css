@@ -1,0 +1,4 @@
+body{background:#eee;color:#222;}
+.main-content blockquote {background-color:#fff;border-left-color:lightblue;padding:0.5rem 1.2rem}
+.main-content code {background-color:rgb(245,255,225);color:darkgreen;}
+.main-content pre {border-color:#bbb;background-color:#ddd;}
