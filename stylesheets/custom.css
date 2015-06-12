@@ -5,3 +5,4 @@ body{background:#eee;color:#222;}
 .main-content hr {height: 1px;background-color: #ccc;border-bottom: 1px solid #fff;}
 .main-content a code {color:#1e6bb8;background-color:transparent;font-size:18px;padding:0;display:inline;}
 .site-footer {border-top-color:#ddd;border-radius:0 2rem 0 0;}
+.site-footer-credits {font-size:0.8rem;}
