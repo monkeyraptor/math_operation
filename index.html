@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>Math operation by monkeyraptor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,282 +9,285 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
+</head>
+
+<body>
     <section class="page-header">
-      <h1 class="project-name">Math operation</h1>
-      <h2 class="project-tagline">Custom mathematical functions in JavaScript</h2>
-      <a href="https://github.com/monkeyraptor/math_operation" class="btn">View on GitHub</a>
-      <a href="https://github.com/monkeyraptor/math_operation/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/monkeyraptor/math_operation/tarball/master" class="btn">Download .tar.gz</a>
+        <h1 class="project-name">Math operation</h1>
+        <h2 class="project-tagline">Custom mathematical functions in JavaScript</h2>
+        <a href="https://github.com/monkeyraptor/math_operation" class="btn">View on GitHub</a>
+        <a href="https://github.com/monkeyraptor/math_operation/zipball/master" class="btn">Download .zip</a>
+        <a href="https://github.com/monkeyraptor/math_operation/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
-      <h1>
+        <h1>
 <a id="math-operations" class="anchor" href="#math-operations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Math Operations</h1>
 
-<p><strong><em>Some mathematical functions in JavaScript</em></strong></p>
+        <p><strong><em>Some mathematical functions in JavaScript</em></strong></p>
 
-<p>This is not overriding built-in <code>Math()</code> method, just a custom <em>module</em> with different functions combined.</p>
+        <p>This is not overriding built-in <code>Math()</code> method, just a custom <em>module</em> with different functions combined.</p>
 
-<h2>
+        <h2>
 <a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>DEMO</h2>
 
-<p><a href="http://codepen.io/monkeyraptor/full/YXzPvN/"><code>At CodePen</code></a></p>
+        <p data-height="929" data-theme-id="666" data-slug-hash="YXzPvN" data-default-tab="result" data-user="monkeyraptor" class='codepen'>See the Pen <a href='http://codepen.io/monkeyraptor/pen/YXzPvN/'>Custom Math JS Demo</a> by Monkey Raptor (<a href='http://codepen.io/monkeyraptor'>@monkeyraptor</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+        <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-<p><img src="https://jpython27.appspot.com/custom_math_ui.png" alt="UI snapshot"></p>
+        <p><img src="https://jpython27.appspot.com/custom_math_ui.png" alt="UI snapshot"></p>
 
-<blockquote>
-<p>The demo uses the <a href="https://github.com/monkeyraptor/math_operation/blob/master/demo/custom_math_2.js"><code>custom_math_2.js</code></a> (in <code>demo</code> folder).</p>
-</blockquote>
+        <blockquote>
+            <p>The demo uses the <a href="https://github.com/monkeyraptor/math_operation/blob/master/demo/custom_math_2.js"><code>custom_math_2.js</code></a> (in <code>demo</code> folder).</p>
+        </blockquote>
 
-<p>The difference<del>s are</del> is:</p>
+        <p>The difference<del>s are</del> is:</p>
 
-<ul>
-<li>
-<del>The demo's user interface handler: It won't work for input with <code>-</code> (dash)</del> Update: it's now available for negative number input. So this is not categorized as difference. Uh huh.</li>
-<li>The demo is using <del>all</del> <code>while</code> (the script on the HTML is using <code>do-while</code>) for the looping (testing purpose). The original one (<a href="https://github.com/monkeyraptor/math_operation/blob/master/custom_math.js"><code>custom_math.js</code></a>) is all using <code>for</code>.</li>
-</ul>
+        <ul>
+            <li>
+                <del>The demo's user interface handler: It won't work for input with <code>-</code> (dash)</del> Update: it's now available for negative number input. So this is not categorized as difference. Uh huh.</li>
+            <li>The demo is using <del>all</del> <code>while</code> (the script on the HTML is using <code>do-while</code>) for the looping (testing purpose). The original one (<a href="https://github.com/monkeyraptor/math_operation/blob/master/custom_math.js"><code>custom_math.js</code></a>) is all using <code>for</code>.</li>
+        </ul>
 
-<blockquote>
-<p>For transforming <code>do-while</code> (with <code>break</code>) to <code>forEach</code>, I typed a gist <a href="https://gist.github.com/monkeyraptor/6e5579920b6ccf8153ed"><code>right there</code></a>. By default, there's no <code>break</code>-ing in <code>forEach</code>, thus we need to tinker the script flow so it fits the loop block.</p>
-</blockquote>
+        <blockquote>
+            <p>For transforming <code>do-while</code> (with <code>break</code>) to <code>forEach</code>, I typed a gist <a href="https://gist.github.com/monkeyraptor/6e5579920b6ccf8153ed"><code>right there</code></a>. By default, there's no <code>break</code>-ing in <code>forEach</code>, thus we need to tinker the script flow so it fits the loop block.</p>
+        </blockquote>
 
-<p>I'll be adding more of them lator. Feel free to add more or fork or whatever.</p>
+        <p>I'll be adding more of them lator. Feel free to add more or fork or whatever.</p>
 
-<p>Meanwhile, it consists of:</p>
+        <hr>
+        <p><strong>Meanwhile</strong>, it consists of:</p>
 
-<h3>
+        <h3>
 <a id="1-factorial" class="anchor" href="#1-factorial" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. <strong>Factorial</strong>
 </h3>
 
-<p>Usage: <code>math.factorial(n)</code></p>
+        <p>Usage: <code>math.factorial(n)</code></p>
 
-<blockquote>
-<p>Example: <code>math.factorial(3)</code> will generate output <code>6</code> (number).</p>
-</blockquote>
+        <blockquote>
+            <p>Example: <code>math.factorial(3)</code> will generate output <code>6</code> (number).</p>
+        </blockquote>
 
-<h3>
+        <h3>
 <a id="2-combination" class="anchor" href="#2-combination" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. <strong>Combination</strong>
 </h3>
 
-<p>Usage: <code>math.combination(n, k)</code></p>
+        <p>Usage: <code>math.combination(n, k)</code></p>
 
-<blockquote>
-<p>Example: <code>math.combination(5, 2)</code> will generate output <code>10</code> (number).</p>
-</blockquote>
+        <blockquote>
+            <p>Example: <code>math.combination(5, 2)</code> will generate output <code>10</code> (number).</p>
+        </blockquote>
 
-<h3>
+        <h3>
 <a id="3-permutation" class="anchor" href="#3-permutation" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. <strong>Permutation</strong>
 </h3>
 
-<p>Usage: <code>math.permutation(n, k)</code></p>
+        <p>Usage: <code>math.permutation(n, k)</code></p>
 
-<blockquote>
-<p>Example: <code>math.permutation(5, 2)</code> will generate output <code>20</code> (number).</p>
+        <blockquote>
+            <p>Example: <code>math.permutation(5, 2)</code> will generate output <code>20</code> (number).</p>
 
-<p>n is <strong>total number</strong></p>
+            <p>n is <strong>total number</strong></p>
 
-<p>k is the number of <strong>combination</strong> or <strong>permutation</strong></p>
+            <p>k is the number of <strong>combination</strong> or <strong>permutation</strong></p>
 
-<p>Also, browser only <em>accommodates</em> 21 digits without compacting it with the <em>exponent</em>. So, that.</p>
-</blockquote>
+            <p>Also, browser only <em>accommodates</em> 21 digits without compacting it with the <em>exponent</em>. So, that.</p>
+        </blockquote>
 
-<h3>
+        <h3>
 <a id="4-adding-comma-for-large-integer" class="anchor" href="#4-adding-comma-for-large-integer" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. <strong>Adding comma for large integer</strong>
 </h3>
 
-<p>Usage: <code>math.addcomma(your_number)</code></p>
+        <p>Usage: <code>math.addcomma(your_number)</code></p>
 
-<blockquote>
-<p><code>your_number</code> can be positive or negative. It has to be <strong>number</strong> (<strong>integer</strong>). If it has decimal point, it will be rounded down to nearest integer. Once again, browser only <em>accommodates</em> 21 digits before it is <strong>compacted</strong> using exponent.</p>
+        <blockquote>
+            <p><code>your_number</code> can be positive or negative. It has to be <strong>number</strong> (<strong>integer</strong>). If it has decimal point, it will be rounded down to nearest integer. Once again, browser only <em>accommodates</em> 21 digits before it is <strong>compacted</strong> using exponent.</p>
 
-<p>Examples: </p>
+            <p>Examples: </p>
 
-<ul>
-<li>
-<code>math.addcomma(10000.8)</code> will generate output <code>10,000</code>. It is a <code>string</code> output.</li>
-<li>
-<code>math.addcomma(-28900251)</code> will generate output <code>-28,900,251</code> (<code>string</code>).</li>
-</ul>
+            <ul>
+                <li>
+                    <code>math.addcomma(10000.8)</code> will generate output <code>10,000</code>. It is a <code>string</code> output.</li>
+                <li>
+                    <code>math.addcomma(-28900251)</code> will generate output <code>-28,900,251</code> (<code>string</code>).</li>
+            </ul>
 
-<p>This <em>isn't</em> actually a math operation, more like <em>structuring-number-so-it-can-be-read</em>.</p>
+            <p>This <em>isn't</em> actually a math operation, more like <em>structuring-number-so-it-can-be-read</em>.</p>
 
-<p>Explanation link: <a href="http://monkeyraptor.johanpaul.net/2014/06/doodle-formatting-integer-with.html">on Monkey Raptor</a></p>
-</blockquote>
+            <p>Explanation link: <a href="http://monkeyraptor.johanpaul.net/2014/06/doodle-formatting-integer-with.html">on Monkey Raptor</a></p>
+        </blockquote>
 
-<h3>
+        <h3>
 <a id="5-generating-fibonacci-sequence" class="anchor" href="#5-generating-fibonacci-sequence" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. <strong>Generating Fibonacci sequence</strong>
 </h3>
 
-<p>Usage: <code>math.fibonacci(1st_number, 2nd_number, how_many)</code></p>
+        <p>Usage: <code>math.fibonacci(1st_number, 2nd_number, how_many)</code></p>
 
-<blockquote>
-<p>You have to provide all three arguments. <del>Each has to be <strong>non-zero</strong></del> <code>1st_number</code> and <code>2nd_number</code> can be zero and <code>how_many</code> has to be <strong>greater than 0</strong>. It will also be rounded down to nearest integer if you put number with decimal point.</p>
+        <blockquote>
+            <p>You have to provide all three arguments. <del>Each has to be <strong>non-zero</strong></del> <code>1st_number</code> and <code>2nd_number</code> can be zero and <code>how_many</code> has to be <strong>greater than 0</strong>. It will also be rounded down to nearest integer if you put number with decimal point.</p>
 
-<p>Example: <code>math.fibonacci(-1, 2, 5)</code> will generate output: <code>-1, 2, 1, 3, 4, 7, 11</code> (<code>string</code> output). It started from -1 and 2, then generated 5 additional numbers sequence.</p>
+            <p>Example: <code>math.fibonacci(-1, 2, 5)</code> will generate output: <code>-1, 2, 1, 3, 4, 7, 11</code> (<code>string</code> output). It started from -1 and 2, then generated 5 additional numbers sequence.</p>
 
-<p>Demo link: <a href="http://codepen.io/monkeyraptor/pen/mqiuK/">on CodePen</a></p>
-</blockquote>
+            <p>Demo link: <a href="http://codepen.io/monkeyraptor/pen/mqiuK/">on CodePen</a></p>
+        </blockquote>
 
-<h3>
+        <h3>
 <a id="6-get-the-factors-of-positive-integer" class="anchor" href="#6-get-the-factors-of-positive-integer" aria-hidden="true"><span class="octicon octicon-link"></span></a>6. <strong>Get the factors of positive integer</strong>
 </h3>
 
-<p>Usage: <code>math.factorof(the_number, flag)</code></p>
+        <p>Usage: <code>math.factorof(the_number, flag)</code></p>
 
-<blockquote>
-<p>It has <code>flag</code>. <code>0</code> to return only the factors (string). <code>1</code> to return list of multiplications of the factors.</p>
+        <blockquote>
+            <p>It has <code>flag</code>. <code>0</code> to return only the factors (string). <code>1</code> to return list of multiplications of the factors.</p>
 
-<p>This is using iterations, so put considerably <em>small</em> input to avoid browser crash. It should work fine with max 5 digits length (99,999) input. <em>I didn't put actual limit in this</em>.</p>
+            <p>This is using iterations, so put considerably <em>small</em> input to avoid browser crash. It should work fine with max 5 digits length (99,999) input. <em>I didn't put actual limit in this</em>.</p>
 
-<p>If the input is negative, it will be converted into positive.</p>
+            <p>If the input is negative, it will be converted into positive.</p>
 
-<p>Examples:</p>
+            <p>Examples:</p>
 
-<ul>
-<li>
-<code>math.factorof(625, 0)</code> or just <code>math.factorof(625)</code> will generate output <code>1, 5, 25, 125, 625</code> (string).</li>
-<li>
-<code>math.factorof(625, 1)</code> will generate output <code>1 * 625, 5 * 125, 25 * 25</code> (string).</li>
-</ul>
-</blockquote>
+            <ul>
+                <li>
+                    <code>math.factorof(625, 0)</code> or just <code>math.factorof(625)</code> will generate output <code>1, 5, 25, 125, 625</code> (string).</li>
+                <li>
+                    <code>math.factorof(625, 1)</code> will generate output <code>1 * 625, 5 * 125, 25 * 25</code> (string).</li>
+            </ul>
+        </blockquote>
 
-<h3>
+        <h3>
 <a id="7-check-prime-number" class="anchor" href="#7-check-prime-number" aria-hidden="true"><span class="octicon octicon-link"></span></a>7. <strong>Check prime number</strong>
 </h3>
 
-<p>Usage: <code>math.prime_check(the_number)</code></p>
+        <p>Usage: <code>math.prime_check(the_number)</code></p>
 
-<blockquote>
-<p>The <code>the_number</code> has to be greater than 1 and an integer.</p>
+        <blockquote>
+            <p>The <code>the_number</code> has to be greater than 1 and an integer.</p>
 
-<p>Examples:</p>
+            <p>Examples:</p>
 
-<ul>
-<li>
-<code>math.prime_check(210000000)</code> will generate output <code>Not a prime number</code> (string).</li>
-<li>
-<code>math.prime_check(31)</code> will generate output <code>PRIME number</code> (string).</li>
-</ul>
+            <ul>
+                <li>
+                    <code>math.prime_check(210000000)</code> will generate output <code>Not a prime number</code> (string).</li>
+                <li>
+                    <code>math.prime_check(31)</code> will generate output <code>PRIME number</code> (string).</li>
+            </ul>
 
-<p>Demo with user interface <a href="http://portraptor.blogspot.com/2014/04/prime-number-checker.html">on PortRaptor</a></p>
-</blockquote>
+            <p>Demo with user interface <a href="http://portraptor.blogspot.com/2014/04/prime-number-checker.html">on PortRaptor</a></p>
+        </blockquote>
 
-<h3>
+        <h3>
 <a id="8-generate-prime-numbers" class="anchor" href="#8-generate-prime-numbers" aria-hidden="true"><span class="octicon octicon-link"></span></a>8. <strong>Generate prime numbers</strong>
 </h3>
 
-<p>Usage: <code>math.generate_prime(start_from, how_many)</code></p>
+        <p>Usage: <code>math.generate_prime(start_from, how_many)</code></p>
 
-<blockquote>
-<p>The <code>start_from</code> has to be greater than 1 and an integer. <code>how_many</code> has to be larger than 0.</p>
+        <blockquote>
+            <p>The <code>start_from</code> has to be greater than 1 and an integer. <code>how_many</code> has to be larger than 0.</p>
 
-<p>Examples:</p>
+            <p>Examples:</p>
 
-<ul>
-<li>
-<code>math.generate_prime(2, 3)</code> will generate output <code>2, 3, 5</code> (string).</li>
-<li>
-<code>math.generate_prime(4, 1)</code> will generate output <code>5</code> (string).</li>
-</ul>
+            <ul>
+                <li>
+                    <code>math.generate_prime(2, 3)</code> will generate output <code>2, 3, 5</code> (string).</li>
+                <li>
+                    <code>math.generate_prime(4, 1)</code> will generate output <code>5</code> (string).</li>
+            </ul>
 
-<p>Demo with user interface <a href="http://portraptor.blogspot.com/2014/05/prime-number-generator-by-monkey-raptor.html">on PortRaptor</a></p>
-</blockquote>
+            <p>Demo with user interface <a href="http://portraptor.blogspot.com/2014/05/prime-number-generator-by-monkey-raptor.html">on PortRaptor</a></p>
+        </blockquote>
 
-<h3>
+        <h3>
 <a id="9-generate-pascals-triangle-sequence" class="anchor" href="#9-generate-pascals-triangle-sequence" aria-hidden="true"><span class="octicon octicon-link"></span></a>9. <strong>Generate Pascal's triangle sequence</strong>
 </h3>
 
-<p>Usage: <code>math.pascal_triangle(which_line [or] how_many, flag)</code></p>
+        <p>Usage: <code>math.pascal_triangle(which_line [or] how_many, flag)</code></p>
 
-<blockquote>
-<p>The <code>which_line [or] how_many</code> has to be natural number (N*). <code>flag</code> can be 0 or 1.</p>
+        <blockquote>
+            <p>The <code>which_line [or] how_many</code> has to be natural number (N*). <code>flag</code> can be 0 or 1.</p>
 
-<ul>
-<li>
-<code>flag</code> 0 is for generating a particular line of Pascal's triangle sequence.</li>
-<li>
-<code>flag</code> 1 is for generating all lines of Pascal's triangle sequence until the given limit.</li>
-</ul>
-</blockquote>
+            <ul>
+                <li>
+                    <code>flag</code> 0 is for generating a particular line of Pascal's triangle sequence.</li>
+                <li>
+                    <code>flag</code> 1 is for generating all lines of Pascal's triangle sequence until the given limit.</li>
+            </ul>
+        </blockquote>
 
-<p><strong>PLEASE NOTE that this is using iteration, so, limit the input. I recommend around 20-ish. It will still work smoothly with that input range. Above that, the it'll "break" the browser.</strong></p>
+        <p><strong>PLEASE NOTE that this is using iteration, so, limit the input. I recommend around 20-ish. It will still work smoothly with that input range. Above that, the it'll "break" the browser.</strong></p>
 
-<blockquote>
-<p>Examples:</p>
+        <blockquote>
+            <p>Examples:</p>
 
-<ul>
-<li>
-<code>math.pascal_triangle(2, 0)</code> will generate output <code>1, 1</code> (string).</li>
-<li>
-<code>math.pascal_triangle(3, 1)</code> will generate output <code>1 | 1 1 | 1 2 1</code> (string).</li>
-</ul>
+            <ul>
+                <li>
+                    <code>math.pascal_triangle(2, 0)</code> will generate output <code>1, 1</code> (string).</li>
+                <li>
+                    <code>math.pascal_triangle(3, 1)</code> will generate output <code>1 | 1 1 | 1 2 1</code> (string).</li>
+            </ul>
 
-<p>Credit for neat example <code>www.ywhmaths.webs.com/Arithmetic/Pascal.html</code></p>
-</blockquote>
+            <p>Credit for neat example <code>www.ywhmaths.webs.com/Arithmetic/Pascal.html</code></p>
+        </blockquote>
 
-<h3>
+        <h3>
 <a id="10-least-common-multiple-lcm" class="anchor" href="#10-least-common-multiple-lcm" aria-hidden="true"><span class="octicon octicon-link"></span></a>10. <strong>Least Common Multiple (LCM)</strong>
 </h3>
 
-<p>Usage: <code>math.lcm(num_1, num_2[, num_3])</code></p>
+        <p>Usage: <code>math.lcm(num_1, num_2[, num_3])</code></p>
 
-<blockquote>
-<p><code>num_3</code> is optional. It can calculate 2 or 3 arguments.</p>
+        <blockquote>
+            <p><code>num_3</code> is optional. It can calculate 2 or 3 arguments.</p>
 
-<p>Each input must be natural number (N*) (non-zero positive integer)</p>
+            <p>Each input must be natural number (N*) (non-zero positive integer)</p>
 
-<p>Examples:</p>
+            <p>Examples:</p>
 
-<ul>
-<li>
-<code>math.lcm(12, 18)</code> will generate output <code>36</code> (number).</li>
-<li>
-<code>math.lcm(15, 8, 42)</code> will generate output <code>840</code> (number).</li>
-</ul>
-</blockquote>
+            <ul>
+                <li>
+                    <code>math.lcm(12, 18)</code> will generate output <code>36</code> (number).</li>
+                <li>
+                    <code>math.lcm(15, 8, 42)</code> will generate output <code>840</code> (number).</li>
+            </ul>
+        </blockquote>
 
-<h3>
+        <h3>
 <a id="11-greatest-common-factor-gcf" class="anchor" href="#11-greatest-common-factor-gcf" aria-hidden="true"><span class="octicon octicon-link"></span></a>11. <strong>Greatest Common Factor (GCF)</strong>
 </h3>
 
-<p>Usage: <code>math.gcf(num_1, num_2[, num_3])</code></p>
+        <p>Usage: <code>math.gcf(num_1, num_2[, num_3])</code></p>
 
-<blockquote>
-<p><code>num_3</code> is also optional. It can calculate 2 or 3 arguments.</p>
+        <blockquote>
+            <p><code>num_3</code> is also optional. It can calculate 2 or 3 arguments.</p>
 
-<p>Each input must be natural number (N*) (non-zero positive integer)</p>
+            <p>Each input must be natural number (N*) (non-zero positive integer)</p>
 
-<p>Examples:</p>
+            <p>Examples:</p>
 
-<ul>
-<li>
-<code>math.gcf(12, 15)</code> will generate output <code>3</code> (number).</li>
-<li>
-<code>math.lcm(51, 18, 42)</code> will generate output <code>3</code> (number).</li>
-</ul>
-</blockquote>
+            <ul>
+                <li>
+                    <code>math.gcf(12, 15)</code> will generate output <code>3</code> (number).</li>
+                <li>
+                    <code>math.lcm(51, 18, 42)</code> will generate output <code>3</code> (number).</li>
+            </ul>
+        </blockquote>
 
-<h2>
+        <h2>
 <a id="string-to-array" class="anchor" href="#string-to-array" aria-hidden="true"><span class="octicon octicon-link"></span></a>String to array</h2>
 
-<p>If you need to get <code>array</code> from <code>string</code> output for your other additional functions, it can be done with:</p>
+        <p>If you need to get <code>array</code> from <code>string</code> output for your other additional functions, it can be done with:</p>
 
-<div class="highlight highlight-javascript"><pre>   the_array <span class="pl-k">=</span> the_string_output.<span class="pl-c1">split</span>(<span class="pl-s"><span class="pl-pds">"</span>, <span class="pl-pds">"</span></span>);</pre></div>
+        <div class="highlight highlight-javascript"><pre>   the_array <span class="pl-k">=</span> the_string_output.<span class="pl-c1">split</span>(<span class="pl-s"><span class="pl-pds">"</span>, <span class="pl-pds">"</span></span>);</pre></div>
 
-<blockquote>
-<p>This mostly uses <code>join(", ")</code> to convert the <code>array</code> into <code>string</code> output. Except the <strong>pascal_triangle</strong> and <strong>factorof</strong> with <code>flag</code> 1. You can customize the <code>join()</code> part in those.</p>
-</blockquote>
+        <blockquote>
+            <p>This mostly uses <code>join(", ")</code> to convert the <code>array</code> into <code>string</code> output. Except the <strong>pascal_triangle</strong> and <strong>factorof</strong> with <code>flag</code> 1. You can customize the <code>join()</code> part in those.</p>
+        </blockquote>
 
-<h2>
+        <h2>
 <a id="how-to-use-it-in-html" class="anchor" href="#how-to-use-it-in-html" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use it in HTML</h2>
 
-<p>Grab the <a href="https://github.com/monkeyraptor/math_operation/blob/master/custom_math.js"><code>custom_math.js</code></a>, you can compress it yourself (recommended <a href="http://gpbmike.github.io/refresh-sf/"><code>tool</code></a>).</p>
+        <p>Grab the <a href="https://github.com/monkeyraptor/math_operation/blob/master/custom_math.js"><code>custom_math.js</code></a>, you can compress it yourself (recommended <a href="http://gpbmike.github.io/refresh-sf/"><code>tool</code></a>).</p>
 
-<p>Then:</p>
+        <p>Then:</p>
 
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">html</span>&gt;
+        <div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">html</span>&gt;
 
     &lt;<span class="pl-ent">head</span>&gt;
 
@@ -319,25 +323,29 @@
 
 &lt;/<span class="pl-ent">html</span>&gt;</pre></div>
 
-<h3>
+        <h3>
 <a id="loading-externally-and-asynchronously" class="anchor" href="#loading-externally-and-asynchronously" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loading externally and asynchronously</h3>
 
-<p>For loading the script from <em>external</em> storage (not placed in the HTML) and <em>asynchronous</em>, read these gists:</p>
+        <p>For loading the script from <em>external</em> storage (not placed in the HTML) and <em>asynchronous</em>, read these gists:</p>
 
-<ol>
-<li><p><strong><em>Not recommended</em></strong> <a href="https://gist.github.com/monkeyraptor/532517be33ead64e57f5"><code>Gist one</code></a>: using <code>script</code> tag with <code>async</code> attribute and using timer to detect the <em>readiness</em> of the external script.</p></li>
-<li><p><a href="https://gist.github.com/monkeyraptor/339905bc5edc703b9f92"><code>Gist two</code></a>: inject the <code>script</code> element via JS.</p></li>
-</ol>
+        <ol>
+            <li>
+                <p><strong><em>Not recommended</em></strong> <a href="https://gist.github.com/monkeyraptor/532517be33ead64e57f5"><code>Gist one</code></a>: using <code>script</code> tag with <code>async</code> attribute and using timer to detect the <em>readiness</em> of the external script.</p>
+            </li>
+            <li>
+                <p><a href="https://gist.github.com/monkeyraptor/339905bc5edc703b9f92"><code>Gist two</code></a>: inject the <code>script</code> element via JS.</p>
+            </li>
+        </ol>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/monkeyraptor/math_operation">Math operation</a> is maintained by <a href="https://github.com/monkeyraptor">monkeyraptor</a>.</span>
+        <footer class="site-footer">
+            <span class="site-footer-owner"><a href="https://github.com/monkeyraptor/math_operation">Math operation</a> is maintained by <a href="https://github.com/monkeyraptor">monkeyraptor</a>.</span>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+            <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+        </footer>
 
     </section>
 
-  
-  </body>
-</html>
 
+</body>
+
+</html>
