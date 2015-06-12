@@ -3,4 +3,4 @@ body{background:#eee;color:#222;}
 .main-content code {background-color:rgb(245,255,225);color:darkgreen;}
 .main-content pre {border-color:#bbb;background-color:#ddd;}
 .main-content hr {height: 1px;background-color: #ccc;border-bottom: 1px solid #fff;}
-.main-content a code {color:#1e6bb8;background-color:transparent;}
+.main-content a code {color:#1e6bb8;background-color:transparent;font-size:18px;padding:0;display:inline;}
