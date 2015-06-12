@@ -88,7 +88,7 @@
                     <code>math.addcomma(-28900251)</code> will generate output <code>-28,900,251</code> (<code>string</code>).</li>
             </ul>
             <p>This <em>isn't</em> actually a math operation, more like <em>structuring-number-so-it-can-be-read</em>.</p>
-            <p>Explanation link: <a target="_blank" title="new window" href="http://monkeyraptor.johanpaul.net/2014/06/doodle-formatting-integer-with.html">on Monkey Raptor</a></p>
+            <p>Explanation on <a target="_blank" title="new window" href="http://monkeyraptor.johanpaul.net/2014/06/doodle-formatting-integer-with.html"><code>Monkey Raptor</code></a></p>
         </blockquote>
 
         <!--5-->
@@ -97,7 +97,7 @@
         <blockquote>
             <p>You have to provide all three arguments. <del>Each has to be <strong>non-zero</strong></del> <code>1st_number</code> and <code>2nd_number</code> can be zero and <code>how_many</code> has to be <strong>greater than 0</strong>. It will also be rounded down to nearest integer if you put number with decimal point.</p>
             <p>Example: <code>math.fibonacci(-1, 2, 5)</code> will generate output: <code>-1, 2, 1, 3, 4, 7, 11</code> (<code>string</code> output). It started from -1 and 2, then generated 5 additional numbers sequence.</p>
-            <p>Demo link: <a target="_blank" title="new window" href="http://codepen.io/monkeyraptor/pen/mqiuK/">on CodePen</a></p>
+            <p>Demo on <a target="_blank" title="new window" href="http://codepen.io/monkeyraptor/pen/mqiuK/"><code>CodePen</code></a></p>
         </blockquote>
         
         <!--6-->
@@ -128,7 +128,7 @@
                 <li>
                     <code>math.prime_check(31)</code> will generate output <code>PRIME number</code> (string).</li>
             </ul>
-            <p>Demo with user interface <a target="_blank" title="new window" href="http://portraptor.johanpaul.net/2014/04/prime-number-checker.html">on PortRaptor</a></p>
+            <p>Demo with user interface on <a target="_blank" title="new window" href="http://portraptor.johanpaul.net/2014/04/prime-number-checker.html"><code>Port Raptor</code></a></p>
         </blockquote>
 
         <!--8-->
@@ -143,7 +143,7 @@
                 <li>
                     <code>math.generate_prime(4, 1)</code> will generate output <code>5</code> (string).</li>
             </ul>
-            <p>Demo with user interface <a target="_blank" title="new window" href="http://portraptor.johanpaul.net/2014/05/prime-number-generator-by-monkey-raptor.html">on PortRaptor</a></p>
+            <p>Demo with user interface on <a target="_blank" title="new window" href="http://portraptor.johanpaul.net/2014/05/prime-number-generator-by-monkey-raptor.html"><code>Port Raptor</code></a></p>
         </blockquote>
 
         <!--9-->
@@ -167,7 +167,7 @@
                 <li>
                     <code>math.pascal_triangle(3, 1)</code> will generate output <code>1 | 1 1 | 1 2 1</code> (string).</li>
             </ul>
-            <p>Credit for neat example <code>www.ywhmaths.webs.com/Arithmetic/Pascal.html</code></p>
+            <p>Credit for neat example <u>www.ywhmaths.webs.com/Arithmetic/Pascal.html</u></p>
         </blockquote>
 
         <!--10-->
@@ -207,13 +207,14 @@
         <p>If you need to get <code>array</code> from <code>string</code> output for your other additional functions, it can be done with:</p>
         <div class="highlight highlight-javascript"><pre>the_array <span class="pl-k">=</span> the_string_output.<span class="pl-c1">split</span>(<span class="pl-s"><span class="pl-pds">"</span>, <span class="pl-pds">"</span></span>);</pre></div>
         <blockquote>
-            <p>This mostly uses <code>join(", ")</code> to convert the <code>array</code> into <code>string</code> output. Except the <strong>pascal_triangle</strong> and <strong>factorof</strong> with <code>flag</code> 1. You can customize the <code>join()</code> part in those.</p>
+            <p>This mostly uses <code>join(", ")</code> to convert the <code>array</code> into <code>string</code> output.</p>
+            <p><em>Except</em> the <strong>pascal_triangle</strong> and <strong>factorof</strong> with <code>flag</code> 1. You can customize the <code>join()</code> part in those.</p>
         </blockquote>
         
         <hr>
         
         <h2><a id="how-to-use-it-in-html" class="anchor" href="#how-to-use-it-in-html" aria-hidden="true"><span class="octicon octicon-link">How to use it in HTML</span></a></h2>
-        <p>Grab the <code>custom_math.js</code>, you can compress it yourself.</p>
+        <p>Grab the <code>custom_math.js</code> or <code>custom_math_2.js</code>, you can compress it yourself.</p>
         <p>Then:</p>
         <div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">html</span>&gt;
 
@@ -256,7 +257,7 @@
         <p>For loading the script from <em>external</em> storage (not placed in the HTML) and <em>asynchronous</em>, read these gists:</p>
         <ol>
             <li>
-                <p><code style="background:#fff;color:pink">Not recommended...</code> <a target="_blank" title="new window" href="https://gist.github.com/monkeyraptor/532517be33ead64e57f5"><code>Gist one</code></a>: using <code>script</code> tag with <code>async</code> attribute and using timer to detect the <em>readiness</em> of the external script.</p>
+                <p><code style="background:#fff;color:#aaa">Not recommended...</code> <a target="_blank" title="new window" href="https://gist.github.com/monkeyraptor/532517be33ead64e57f5"><code>Gist one</code></a>: using <code>script</code> tag with <code>async</code> attribute and using timer to detect the <em>readiness</em> of the external script.</p>
             </li>
             <li>
                 <p><a target="_blank" title="new window" href="https://gist.github.com/monkeyraptor/339905bc5edc703b9f92"><code>Gist two</code></a>: inject the <code>script</code> element via JS.</p>
