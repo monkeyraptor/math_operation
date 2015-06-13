@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/custom.css" media="screen">
-    <style>.ifrm_embed{display:none;height:930px;border:0;}.centerText{text-align:center;}.cstm{font-size:2em;width:50%;background-color:#333;}.cstm:hover{background-color:royalblue;}</style>
+    <style>.demo_div{display:none;margin:10px 0;}.ifrm_embed{height:930px;width:100%;border:0;}.centerText{text-align:center;}.cstm{font-size:2em;width:50%;background-color:#333;}.cstm:hover{background-color:royalblue;}</style>
 </head>
 
 <body>
@@ -32,10 +32,13 @@
         
         <!--DEMO-->
         <h2><a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link">DEMO</span></a></h2>
-        <iframe src="https://monkeyraptor.github.io/math_operation/demo.html" class="ifrm_embed"></iframe>
+        <div class="demo_div"></div>
+            <iframe src="https://monkeyraptor.github.io/math_operation/demo.html" class="ifrm_embed"></iframe>
+            <a role="button" class="centerText" href="http://codepen.io/monkeyraptor/pen/YXzPvN" target="_blank" title="new window">EDIT ON CODEPEN</a>
+        </div>
         <div id="btn_holder" class="centerText">
             <button type="button"
-                onclick="document.querySelectorAll('iframe')[0].style.display='block';
+                onclick="document.querySelectorAll('.demo_div')[0].style.display='block';
                         document.getElementById('btn_holder').style.display='none';"
                 class="btn cstm" title="Hit to show demo frame">SHOW IT</button>
         </div>
