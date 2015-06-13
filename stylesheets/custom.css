@@ -6,3 +6,7 @@ body{background:#eee;color:#222;}
 .main-content a code {color:#1e6bb8;background-color:transparent;font-size:18px;padding:0;display:inline;}
 .site-footer {border-top-color:#ddd;border-radius:0 2rem 0 0;}
 .site-footer-credits {font-size:0.8rem;}
+.demo_div{display:none;margin:10px 0;}
+.ifrm_embed{height:880px;width:100%;border:0;}
+.centerText{text-align:center;}
+.cstm{font-size:2em;width:50%;background-color:#333;}.cstm:hover{background-color:royalblue;}
