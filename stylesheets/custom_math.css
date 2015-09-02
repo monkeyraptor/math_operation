@@ -42,7 +42,7 @@ button.input {
 }
 
 #input {
-    width: 75%;
+    width: 83%;
 }
 
 #output {
@@ -75,11 +75,13 @@ hr {
 .list {
     text-align: left;
     margin-top: 0;
+    padding: 0;
 }
 
 .list > li {
     font-size: 16px;
     margin: 10px 0;
+    word-break: break-all;
 }
 
 mark {
@@ -91,10 +93,15 @@ mark {
 }
 
 @media(max-width:640px) {
-    .divider {
+    .divider, .input {
         width: 100%;
     }
     .input {
         font-size: 16px;
+        display: block;
+        border-radius: 0;
+    }
+    button.input {
+        margin-top: 10px;
     }
 }
