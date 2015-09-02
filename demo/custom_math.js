@@ -24,7 +24,7 @@ math = {
         } else {
             result = "INPUT ERROR: n >= 0";
         }
-        if (misc_math.check(result) > 0 && !result.toString().match(/error/gi)) {
+        if (!!misc_math.check(result)) {
             result = "Result is too LARGE: " + result;
         }
         return result;
@@ -64,7 +64,7 @@ math = {
         } else {
             result = "INPUT ERROR: n >= k, n >= 0, k >= 0";
         }
-        if (misc_math.check(result) > 0 && !result.toString().match(/error/gi)) {
+        if (!!misc_math.check(result)) {
             result = "Result is too LARGE: " + result;
         }
         return result;
@@ -98,7 +98,7 @@ math = {
         } else {
             result = "INPUT ERROR: n >= k, n >= 0, k >= 0";
         }
-        if (misc_math.check(result) > 0 && !result.toString().match(/error/gi)) {
+        if (!!misc_math.check(result)) {
             result = "Result is too LARGE: " + result;
         }
         return result;
