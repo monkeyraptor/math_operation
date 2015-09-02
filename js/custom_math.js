@@ -1,5 +1,10 @@
-// READTHIS: https://github.com/monkeyraptor/math_operation
-// Version 2015-09-02
+/*!
+ *  READTHIS: https://github.com/monkeyraptor/math_operation
+ *  Version 2015-09-02
+ *  MIT License (https://github.com/monkeyraptor/math_operation/blob/master/LICENSE.md)
+ *  Authored by Monkey Raptor
+ */
+
 // GLOBAL VARIABLES
 var math, misc_math;
 
@@ -242,7 +247,7 @@ math = {
         i = 2;
         a = Number(a);
         //maximum digit length = 20 (999,999,999,999,999,999,999)
-        if (a.toString().length < 21) {
+        if (!misc_math.check(a)) {
             if (a > 1) {
                 a = Math.floor(a);
                 limit = Math.floor(Math.sqrt(a));
@@ -261,7 +266,7 @@ math = {
             }
 
         } else {
-            result = "INPUT ERROR: digit length < 21";
+            result = "INPUT ERROR: digit length <= 21";
         }
 
         return result;
