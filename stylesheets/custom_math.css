@@ -47,6 +47,16 @@ button.input {
 #input {
     width: 75%;
     border-radius:10px 0 0 10px;
+    background-color: #fff;
+}
+
+#input:focus {
+    background-color: azure;
+}
+
+#input:focus,
+button.input:focus {
+    outline: 0;
 }
 
 #output {
