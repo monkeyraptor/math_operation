@@ -47,7 +47,6 @@ button.input {
 #input {
     width: 75%;
     border-radius: 6px 0 0 6px;
-    background-color: #fff;
 }
 
 #input:focus {
