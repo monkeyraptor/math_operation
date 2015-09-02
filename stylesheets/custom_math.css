@@ -108,5 +108,6 @@ mark {
     }
     button.input {
         margin-top: 10px;
+        margin-left: auto;
     }
 }
