@@ -112,7 +112,7 @@ math = {
         f = [];
         i = 1;
         your_number = Number(your_number);
-        if (!!your_number) {
+        if (!misc_math.check(your_number)) {
             if (your_number < 0) {
                 p = "-";
             } else {
@@ -128,7 +128,7 @@ math = {
             }
             your_number = p + f.reverse().join("");
         } else {
-            your_number = "INPUT ERROR: must be number";
+            your_number = "INPUT ERROR: must be number or too large";
         }
         return your_number;
     },
