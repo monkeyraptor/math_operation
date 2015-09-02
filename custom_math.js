@@ -246,7 +246,6 @@ math = {
         var result, i, limit;
         i = 2;
         a = Number(a);
-        //maximum digit length = 20 (999,999,999,999,999,999,999)
         if (!misc_math.check(a)) {
             if (a > 1) {
                 a = Math.floor(a);
