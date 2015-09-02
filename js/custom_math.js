@@ -24,7 +24,7 @@ math = {
         } else {
             result = "INPUT ERROR: n >= 0";
         }
-        if (misc_math.check(result) > 0 && !result.toString().match(/error/gi)) {
+        if (!!misc_math.check(result)) {
             result = "Result is too LARGE: " + result;
         }
         return result;
@@ -64,7 +64,7 @@ math = {
         } else {
             result = "INPUT ERROR: n >= k, n >= 0, k >= 0";
         }
-        if (misc_math.check(result) > 0 && !result.toString().match(/error/gi)) {
+        if (!!misc_math.check(result)) {
             result = "Result is too LARGE: " + result;
         }
         return result;
@@ -98,7 +98,7 @@ math = {
         } else {
             result = "INPUT ERROR: n >= k, n >= 0, k >= 0";
         }
-        if (misc_math.check(result) > 0 && !result.toString().match(/error/gi)) {
+        if (!!misc_math.check(result)) {
             result = "Result is too LARGE: " + result;
         }
         return result;
@@ -242,7 +242,7 @@ math = {
         i = 2;
         a = Number(a);
         //maximum digit length = 20 (999,999,999,999,999,999,999)
-        if (a.toString().length <= 21) {
+        if (a.toString().length < 21) {
             if (a > 1) {
                 a = Math.floor(a);
                 limit = Math.floor(Math.sqrt(a));
@@ -261,7 +261,7 @@ math = {
             }
 
         } else {
-            result = "INPUT ERROR: digit length <= 21";
+            result = "INPUT ERROR: digit length < 21";
         }
 
         return result;
@@ -489,7 +489,7 @@ misc_math = {
         return obj;
     },
 
-    //checking equal or above 21 digit length or infinity
+    //checking the compacted digit or infinity
     check: function (a) {
         "use strict";
         var result = 0;
